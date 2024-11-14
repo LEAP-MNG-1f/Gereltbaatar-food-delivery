@@ -1,4 +1,5 @@
 import { ProductMainDish } from "../parts/ProductMainDish";
+import { ProductSaladsSnacks } from "../parts/ProductSaladsSnacks";
 import { ProductSeleCol } from "../parts/ProductSeleCol";
 
 export const ProductZone = () => {
@@ -8,6 +9,7 @@ export const ProductZone = () => {
         <div className="flex flex-col gap-20">
           <ProductSeleCol />
           <ProductMainDish />
+          <ProductSaladsSnacks />
         </div>
       </div>
     </main>
