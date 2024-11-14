@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
-import HomePage from "./components/pages/HomePage";
+import HomePage from "../components/pages/HomePage";
 
 export default function Home() {
   const fetchData = async () => {
