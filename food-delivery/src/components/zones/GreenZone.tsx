@@ -1,10 +1,10 @@
-import { Hee } from "../svg/Hee";
+import { HeeIcon } from "../svg/HeeIcon";
 
 export const GreenZone = () => {
   return (
     <main className="">
       <div className="bg-BrandGreen h-[780px]">
-        <Hee />
+        <HeeIcon />
         <div className="container m-auto  h-full">
           <div className="flex items-center justify-between h-full">
             <div className="flex flex-col gap-6 max-w-[384px]">
