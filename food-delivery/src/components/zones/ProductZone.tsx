@@ -1,3 +1,4 @@
+import { ProductMainDish } from "../parts/ProductMainDish";
 import { ProductSeleCol } from "../parts/ProductSeleCol";
 
 export const ProductZone = () => {
@@ -6,7 +7,7 @@ export const ProductZone = () => {
       <div className="container m-auto">
         <div className="flex flex-col gap-20">
           <ProductSeleCol />
-          <div>main dish</div>
+          <ProductMainDish />
         </div>
       </div>
     </main>
