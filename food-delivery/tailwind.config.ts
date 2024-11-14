@@ -9,8 +9,11 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        BrandGreen: "#18BA51",
+      },
+      fontFamily: {
+        Poppins: ["Poppins", "sans-serif"],
+        Comfortaa: ["Comfortaa", "sans-serif"],
       },
     },
   },
