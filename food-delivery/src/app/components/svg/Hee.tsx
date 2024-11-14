@@ -1,9 +1,9 @@
 export const Hee = () => {
   return (
-    <div className="absolute">
+    <div className="absolute z-0">
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="1440"
+        width="100vh"
         height="780"
         viewBox="0 0 1440 788"
         fill="none"

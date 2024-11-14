@@ -10,6 +10,7 @@ export default {
     extend: {
       colors: {
         BrandGreen: "#18BA51",
+        TextSecondary: "#272727",
       },
       fontFamily: {
         Poppins: ["Poppins", "sans-serif"],
