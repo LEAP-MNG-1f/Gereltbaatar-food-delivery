@@ -1,3 +1,4 @@
+import { ProductDessert } from "../parts/ProductDessert";
 import { ProductMainDish } from "../parts/ProductMainDish";
 import { ProductSaladsSnacks } from "../parts/ProductSaladsSnacks";
 import { ProductSeleCol } from "../parts/ProductSeleCol";
@@ -10,6 +11,7 @@ export const ProductZone = () => {
           <ProductSeleCol />
           <ProductMainDish />
           <ProductSaladsSnacks />
+          <ProductDessert />
         </div>
       </div>
     </main>
