@@ -1,4 +1,4 @@
-export const Hee = () => {
+export const HeeIcon = () => {
   return (
     <div className="absolute z-0">
       <svg
