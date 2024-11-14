@@ -1,3 +1,3 @@
 export * from "./Header";
-export * from "./GreenZone";
+export * from "../zones/GreenZone";
 export * from "./FoodNewsCard";

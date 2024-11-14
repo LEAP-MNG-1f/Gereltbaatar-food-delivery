@@ -1,6 +1,7 @@
 import { FoodNewsCard } from "../parts/FoodNewsCard";
-import { GreenZone } from "../parts/GreenZone";
 import { Header } from "../parts/Header";
+import { GreenZone } from "../zones/GreenZone";
+import { ProductZone } from "../zones/ProductZone";
 
 const HomePage = () => {
   return (
@@ -8,6 +9,7 @@ const HomePage = () => {
       <Header />
       <GreenZone />
       <FoodNewsCard />
+      <ProductZone />
     </main>
   );
 };
