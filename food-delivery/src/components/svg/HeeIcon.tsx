@@ -1,12 +1,13 @@
 export const HeeIcon = () => {
   return (
-    <div className="absolute z-0">
+    <div className="absolute">
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="100vh"
-        height="780"
+        width="100vw"
+        height="1080px"
         viewBox="0 0 1440 788"
         fill="none"
+        className="w-full lg:h-[1080px] h-[780px]"
       >
         <path
           opacity="0.1"
