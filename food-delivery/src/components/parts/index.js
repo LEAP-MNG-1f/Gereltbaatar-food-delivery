@@ -6,3 +6,4 @@ export * from "./ProductMainDish";
 export * from "./ProductSaladsSnacks";
 export * from "./ProductDessert";
 export * from "./FoodProductCard";
+export * from "./Footer";

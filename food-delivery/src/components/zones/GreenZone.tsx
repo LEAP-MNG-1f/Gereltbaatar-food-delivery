@@ -2,7 +2,7 @@ import { HeeIcon } from "../svg/HeeIcon";
 
 export const GreenZone = () => {
   return (
-    <main className="">
+    <main>
       <div className="bg-BrandGreen h-[780px] flex items-center justify-center">
         <HeeIcon />
         <div className="container m-auto  h-full max-w-[1200px]">

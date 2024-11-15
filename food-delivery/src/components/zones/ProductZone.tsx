@@ -7,11 +7,13 @@ export const ProductZone = () => {
   return (
     <main>
       <div className="container m-auto max-w-[1200px]">
-        <div className="flex flex-col gap-20">
-          <ProductSeleCol />
-          <ProductMainDish />
-          <ProductSaladsSnacks />
-          <ProductDessert />
+        <div className="pb-[82px]">
+          <div className="flex flex-col gap-20">
+            <ProductSeleCol />
+            <ProductMainDish />
+            <ProductSaladsSnacks />
+            <ProductDessert />
+          </div>
         </div>
       </div>
     </main>
