@@ -1,4 +1,5 @@
 import { GreenStarIcon } from "../svg/GreenStarIcon";
+import { FoodProductCard } from "./FoodProductCard";
 
 export const ProductSeleCol = () => {
   return (
@@ -12,7 +13,28 @@ export const ProductSeleCol = () => {
             </p>
           </div>
         </div>
-        <div className="">product card</div>
+        <div className="grid grid-cols-4 gap-6">
+          <FoodProductCard
+            imgUrl="./FoodImg.png"
+            productTitle="Өглөөний хоол"
+            productPrice={24800}
+          />
+          <FoodProductCard
+            imgUrl="./FoodImg.png"
+            productTitle="Өглөөний хоол"
+            productPrice={24800}
+          />
+          <FoodProductCard
+            imgUrl="./FoodImg.png"
+            productTitle="Өглөөний хоол"
+            productPrice={24800}
+          />
+          <FoodProductCard
+            imgUrl="./FoodImg.png"
+            productTitle="Өглөөний хоол"
+            productPrice={24800}
+          />
+        </div>
       </div>
     </div>
   );
