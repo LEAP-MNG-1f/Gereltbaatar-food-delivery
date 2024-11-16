@@ -1,4 +1,6 @@
-import { HeaderButton } from "../buttons/HeaderButton";
+"use client";
+
+import Link from "next/link";
 import { CartIcon } from "../svg/CartIcon";
 import { PineconeLogo } from "../svg/PineconeLogo";
 
@@ -10,16 +12,17 @@ export const Header = () => {
           <div className="flex gap-6">
             <PineconeLogo />
             <div className="flex gap-2 items-center">
-              <button>
+              <Link href="/">
                 <p className="px-4 py-2 font-bold text-sm leading-4 tracking-[-0.2px]">
                   НҮҮР
                 </p>
-              </button>
-              <button>
+              </Link>
+              <Link href="/menu">
                 <p className="px-4 py-2 font-bold text-sm leading-4 tracking-[-0.2px]">
                   ХООЛНЫ ЦЭС
                 </p>
-              </button>
+              </Link>
+
               <button>
                 <p className="px-4 py-2 font-bold text-sm leading-4 tracking-[-0.2px]">
                   ХҮРГЭЛТИЙН БҮС
