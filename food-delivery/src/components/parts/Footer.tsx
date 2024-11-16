@@ -40,17 +40,7 @@ export const Footer = () => {
                 </Link>
                 <Link href="#" color="#fff">
                   <p className="font-Poppins text-base font-semibold not-italic">
-                    Үйлчилгээний нөхцөл
-                  </p>
-                </Link>
-                <Link href="#" color="#fff">
-                  <p className="font-Poppins text-base font-semibold not-italic">
                     Хүргэлтийн бүс
-                  </p>
-                </Link>
-                <Link href="#" color="#fff">
-                  <p className="font-Poppins text-base font-semibold not-italic">
-                    Нууцлалын бодлого
                   </p>
                 </Link>
               </div>
