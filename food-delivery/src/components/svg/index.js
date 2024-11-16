@@ -6,3 +6,6 @@ export * from "./HeeFooterIcon";
 export * from "./TwitterIcon";
 export * from "./InstagramIcon";
 export * from "./FacebookIcon";
+export * from "./BookIcon";
+export * from "./FoodIngredientsIcon ";
+export * from "./OclocklIcon";

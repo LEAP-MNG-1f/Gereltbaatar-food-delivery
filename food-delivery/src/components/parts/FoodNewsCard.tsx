@@ -1,6 +1,9 @@
 "use client";
 
 import * as React from "react";
+import { BookIcon } from "../svg/BookIcon";
+import { OclocklIcon } from "../svg/OclocklIcon";
+import { FoodIngredientsIcon } from "../svg/FoodIngredientsIcon";
 
 export const FoodNewsCard = () => {
   return (
@@ -9,7 +12,7 @@ export const FoodNewsCard = () => {
         <div className="grid grid-cols-4 gap-[47px]">
           <div className="flex flex-col gap-[15px] p-4 border rounded-2xl shadow-lg">
             <div className="p-[15px]">
-              <img src="./BookImg.png" alt="" width={30} height={30} />
+              <BookIcon />
             </div>
             <div className="flex flex-col gap-1">
               <p className="not-italic font-Poppins font-bold text-TextSecondary text-lg">
@@ -22,7 +25,7 @@ export const FoodNewsCard = () => {
           </div>
           <div className="flex flex-col gap-[15px] p-4 border rounded-2xl shadow-lg">
             <div className="p-[15px]">
-              <img src="./O'clocklImg.png" alt="" width={30} height={30} />
+              <OclocklIcon />
             </div>
             <div className="flex flex-col gap-1">
               <p className="not-italic font-Poppins font-bold text-TextSecondary text-lg">
@@ -35,12 +38,7 @@ export const FoodNewsCard = () => {
           </div>
           <div className="flex flex-col gap-[15px] p-4 border rounded-2xl shadow-lg">
             <div className="p-[15px]">
-              <img
-                src="./FoodIngredientsImg.png"
-                alt=""
-                width={30}
-                height={30}
-              />
+              <FoodIngredientsIcon />
             </div>
             <div className="flex flex-col gap-1">
               <p className="not-italic font-Poppins font-bold text-TextSecondary text-lg">
@@ -53,7 +51,7 @@ export const FoodNewsCard = () => {
           </div>
           <div className="flex flex-col gap-[15px] p-4 border rounded-2xl shadow-lg">
             <div className="p-[15px]">
-              <img src="./BookImg.png" alt="" width={30} height={30} />
+              <BookIcon />
             </div>
             <div className="flex flex-col gap-1">
               <p className="not-italic font-Poppins font-bold text-TextSecondary text-lg">
