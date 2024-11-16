@@ -6,7 +6,7 @@ import { ProductZone } from "../zones/ProductZone";
 
 const HomePage = () => {
   return (
-    <main className="">
+    <main>
       <Header />
       <GreenZone />
       <FoodNewsCard />
