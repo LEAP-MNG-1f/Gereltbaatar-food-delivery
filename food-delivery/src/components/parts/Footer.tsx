@@ -1,3 +1,5 @@
+"use client";
+
 import { HeeFooterIcon } from "../svg/HeeFooterIcon";
 import * as React from "react";
 import { PineconeLogoWhite } from "../svg/PineconeLogoWhite";
@@ -10,7 +12,7 @@ export const Footer = () => {
   return (
     <footer>
       <div className="">
-        <div className="bg-BrandGreen pt-[114px] pb-[109px] flex items-center justify-center relative">
+        <div className="bg-BrandGreen pt-[114px] pb-[109px] flex items-center justify-center relative overflow-hidden">
           <HeeFooterIcon />
           <div className="container m-auto max-w-[1200px]">
             <div className="flex flex-col gap-10">
@@ -23,22 +25,22 @@ export const Footer = () => {
                 </p>
               </div>
               <div className="flex justify-between">
-                <Link href="#" color="#fff">
+                <Link href="/" color="#fff">
                   <p className="font-Poppins text-base font-semibold not-italic">
                     Нүүр
                   </p>
                 </Link>
-                <Link href="#" color="#fff">
+                <Link href="" color="#fff">
                   <p className="font-Poppins text-base font-semibold not-italic">
                     Холбоо барих
                   </p>
                 </Link>
-                <Link href="#" color="#fff">
+                <Link href="" color="#fff">
                   <p className="font-Poppins text-base font-semibold not-italic">
                     Хоолны цэс
                   </p>
                 </Link>
-                <Link href="#" color="#fff">
+                <Link href="" color="#fff">
                   <p className="font-Poppins text-base font-semibold not-italic">
                     Хүргэлтийн бүс
                   </p>
