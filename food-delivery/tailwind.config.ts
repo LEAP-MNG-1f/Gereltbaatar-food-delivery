@@ -16,6 +16,7 @@ export default {
       fontFamily: {
         Poppins: ["Poppins", "sans-serif"],
         Comfortaa: ["Comfortaa", "sans-serif"],
+        Inter: ["Inter", "sans-serif"],
       },
     },
   },
