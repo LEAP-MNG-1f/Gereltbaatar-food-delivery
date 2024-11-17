@@ -2,7 +2,7 @@ import { FoodNewsCard } from "../parts/FoodNewsCard";
 import { Footer } from "../parts/Footer";
 import { Header } from "../parts/Header";
 import { GreenZone } from "../zones/GreenZone";
-import { ProductZone } from "../zones/ProductZone";
+import { HomeProductZone } from "../zones/HomeProductZone";
 
 const HomePage = () => {
   return (
@@ -10,7 +10,7 @@ const HomePage = () => {
       <Header />
       <GreenZone />
       <FoodNewsCard />
-      <ProductZone />
+      <HomeProductZone />
       <Footer />
     </main>
   );
