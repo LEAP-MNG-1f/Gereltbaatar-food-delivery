@@ -25,7 +25,7 @@ export const FoodProductCard = (props: FoodProductCardPropsArray) => {
       <div className="">
         <CardMedia
           component="img"
-          className="!rounded-2xl !max-h-[189px] h-[189px] border "
+          className="!rounded-2xl !max-h-[189px]"
           image={props.image}
         />
       </div>
