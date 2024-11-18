@@ -15,24 +15,24 @@ export const ProductSeleCol = () => {
         </div>
         <div className="grid grid-cols-4 gap-6">
           <FoodProductCard
-            imgUrl="./FoodImg.png"
-            productTitle="Өглөөний хоол"
-            productPrice={24800}
+            image="./FoodImg.png"
+            name="Өглөөний хоол"
+            price={24800}
           />
           <FoodProductCard
-            imgUrl="./FoodImg.png"
-            productTitle="Өглөөний хоол"
-            productPrice={24800}
+            image="./FoodImg.png"
+            name="Өглөөний хоол"
+            price={24800}
           />
           <FoodProductCard
-            imgUrl="./FoodImg.png"
-            productTitle="Өглөөний хоол"
-            productPrice={24800}
+            image="./FoodImg.png"
+            name="Өглөөний хоол"
+            price={24800}
           />
           <FoodProductCard
-            imgUrl="./FoodImg.png"
-            productTitle="Өглөөний хоол"
-            productPrice={24800}
+            image="./FoodImg.png"
+            name="Өглөөний хоол"
+            price={24800}
           />
         </div>
       </div>
