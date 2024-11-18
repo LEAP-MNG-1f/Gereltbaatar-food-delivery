@@ -1,7 +1,7 @@
 import { GreenStarIcon } from "../svg/GreenStarIcon";
 import { FoodProductCard } from "./FoodProductCard";
 
-export const ProductSaladsSnacks = () => {
+export const ProductMainDish = () => {
   return (
     <div className="">
       <div className="flex flex-col gap-6">
@@ -9,31 +9,31 @@ export const ProductSaladsSnacks = () => {
           <div className="flex items-center gap-1">
             <GreenStarIcon />
             <p className="font-Poppins font-bold not-italic text-[22px]">
-              Салад ба зууш
+              Үндсэн хоол
             </p>
           </div>
         </div>
         <div className="grid grid-cols-4 gap-6">
-          <FoodProductCard
-            imgUrl="./FoodImg.png"
-            productTitle="Өглөөний хоол"
-            productPrice={24800}
+          {/* <FoodProductCard
+            image="./FoodImg.png"
+            name="Өглөөний хоол"
+            price={24800}
           />
           <FoodProductCard
-            imgUrl="./FoodImg.png"
-            productTitle="Өглөөний хоол"
-            productPrice={24800}
+            image="./FoodImg.png"
+            name="Өглөөний хоол"
+            price={24800}
           />
           <FoodProductCard
-            imgUrl="./FoodImg.png"
-            productTitle="Өглөөний хоол"
-            productPrice={24800}
+            image="./FoodImg.png"
+            name="Өглөөний хоол"
+            price={24800}
           />
           <FoodProductCard
-            imgUrl="./FoodImg.png"
-            productTitle="Өглөөний хоол"
-            productPrice={24800}
-          />
+            image="./FoodImg.png"
+            name="Өглөөний хоол"
+            price={24800}
+          /> */}
         </div>
       </div>
     </div>

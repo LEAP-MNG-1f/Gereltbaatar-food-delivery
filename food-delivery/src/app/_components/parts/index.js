@@ -8,3 +8,4 @@ export * from "./ProductDessert";
 export * from "./FoodProductCard";
 export * from "./Footer";
 export * from "./CategoryState";
+export * from "./Dialog";

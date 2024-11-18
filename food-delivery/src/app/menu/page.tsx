@@ -1,4 +1,4 @@
-import MenuPage from "@/components/pages/MenuPage";
+import MenuPage from "@/app/_components/pages/MenuPage";
 
 const Menu = () => {
   return (
