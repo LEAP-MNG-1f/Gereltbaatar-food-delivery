@@ -14,11 +14,6 @@ export const ProductDessert = () => {
           </div>
         </div>
         <div className="grid grid-cols-4 gap-6">
-          {/* <FoodProductCard
-            image="./FoodImg.png"
-            name="Өглөөний хоол"
-            price={24800}
-          />
           <FoodProductCard
             image="./FoodImg.png"
             name="Өглөөний хоол"
@@ -33,7 +28,12 @@ export const ProductDessert = () => {
             image="./FoodImg.png"
             name="Өглөөний хоол"
             price={24800}
-          /> */}
+          />
+          <FoodProductCard
+            image="./FoodImg.png"
+            name="Өглөөний хоол"
+            price={24800}
+          />
         </div>
       </div>
     </div>
