@@ -18,6 +18,7 @@ export const MenuProductZone = (props: FoodProductCardProps) => {
               image={product.image}
               name={product.name}
               price={product.price}
+              ingredient={product.ingredient}
             />
           );
         })}
