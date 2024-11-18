@@ -19,6 +19,48 @@ const ProductArray: FoodProductCardPropsArray[] = [
     ingredient: "talh",
     price: 2000,
   },
+  {
+    _id: "3",
+    name: "бууз",
+    image: "./FoodImg.png",
+    ingredient: "talh",
+    price: 2000,
+  },
+  {
+    _id: "4",
+    name: "бууз",
+    image: "./FoodImg.png",
+    ingredient: "talh",
+    price: 2000,
+  },
+  {
+    _id: "5",
+    name: "бууз",
+    image: "./FoodImg.png",
+    ingredient: "talh",
+    price: 2000,
+  },
+  {
+    _id: "6",
+    name: "бууз",
+    image: "./FoodImg.png",
+    ingredient: "talh",
+    price: 2000,
+  },
+  {
+    _id: "7",
+    name: "бууз",
+    image: "./FoodImg.png",
+    ingredient: "talh",
+    price: 2000,
+  },
+  {
+    _id: "7",
+    name: "бууз",
+    image: "./FoodImg.png",
+    ingredient: "talh",
+    price: 2000,
+  },
 ];
 
 const MenuPage = () => {

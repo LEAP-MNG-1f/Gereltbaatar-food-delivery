@@ -4,10 +4,8 @@ type FoodProductCardProps = {
   products?: FoodProductCardPropsArray[];
 };
 
-import {
-  FoodProductCard,
-  FoodProductCardPropsArray,
-} from "../parts/FoodProductCard";
+import { DialogButton } from "../parts/DialogButton";
+import { FoodProductCardPropsArray } from "../parts/FoodProductCard";
 
 export const MenuProductZone = (props: FoodProductCardProps) => {
   return (
@@ -15,7 +13,7 @@ export const MenuProductZone = (props: FoodProductCardProps) => {
       <div className="grid grid-cols-4 gap-[26px]">
         {props.products?.map((product, productIndex) => {
           return (
-            <FoodProductCard
+            <DialogButton
               key={productIndex}
               image={product.image}
               name={product.name}

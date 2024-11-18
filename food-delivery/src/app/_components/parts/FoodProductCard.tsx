@@ -21,28 +21,26 @@ export type FoodProductCardPropsArray = {
 
 export const FoodProductCard = (props: FoodProductCardPropsArray) => {
   return (
-    <button>
-      <div className="flex flex-col gap-[14px]">
-        <div className="">
-          <CardMedia
-            component="img"
-            className="!rounded-2xl !max-h-[189px] h-[189px] border "
-            image={props.image}
-          />
-        </div>
-        <CardContent className="!p-0">
-          <Typography
-            gutterBottom
-            className="!text-start !font-Poppins !font-semibold !not-italic !text-lg !mb-0"
-            component="div"
-          >
-            {props.name}
-          </Typography>
-          <Typography className="!text-start !font-Poppins !font-semibold !not-italic !text-lg !text-BrandGreen">
-            {props.price}₮
-          </Typography>
-        </CardContent>
+    <div className="flex flex-col gap-[14px]">
+      <div className="">
+        <CardMedia
+          component="img"
+          className="!rounded-2xl !max-h-[189px] h-[189px] border "
+          image={props.image}
+        />
       </div>
-    </button>
+      <CardContent className="!p-0">
+        <Typography
+          gutterBottom
+          className="!text-start !font-Poppins !font-semibold !not-italic !text-lg !mb-0"
+          component="div"
+        >
+          {props.name}
+        </Typography>
+        <Typography className="!text-start !font-Poppins !font-semibold !not-italic !text-lg !text-BrandGreen">
+          {props.price}₮
+        </Typography>
+      </CardContent>
+    </div>
   );
 };
