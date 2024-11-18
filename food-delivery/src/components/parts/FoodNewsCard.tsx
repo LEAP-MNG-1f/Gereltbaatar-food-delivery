@@ -8,7 +8,7 @@ import { FoodIngredientsIcon } from "../svg/FoodIngredientsIcon";
 export const FoodNewsCard = () => {
   return (
     <>
-      <div className="container m-auto py-[122px] max-w-[1200px]">
+      <div className="container m-auto py-[122px]">
         <div className="grid grid-cols-4 gap-[47px]">
           <div className="flex flex-col gap-[15px] p-4 border rounded-2xl shadow-lg">
             <div className="p-[15px]">

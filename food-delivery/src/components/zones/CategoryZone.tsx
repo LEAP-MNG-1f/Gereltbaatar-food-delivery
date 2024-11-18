@@ -3,7 +3,7 @@ import { CategoryState } from "../parts/CategoryState";
 export const CategoryZone = () => {
   return (
     <main>
-      <div className="container m-auto boder border-black max-w-[1200px] py-8">
+      <div className="container m-auto boder border-black py-8">
         <div className="grid grid-cols-4 items-center justify-between gap-[26px]">
           <CategoryState text="Breakfast" />
           <CategoryState text="Soup" />

@@ -14,7 +14,7 @@ export const Footer = () => {
       <div className="">
         <div className="bg-BrandGreen pt-[114px] pb-[109px] flex items-center justify-center relative overflow-hidden">
           <HeeFooterIcon />
-          <div className="container m-auto max-w-[1200px]">
+          <div className="container m-auto">
             <div className="flex flex-col gap-10">
               <div className="flex gap-2 items-center justify-center">
                 <div className="p-2">

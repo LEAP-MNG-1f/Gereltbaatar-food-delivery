@@ -6,12 +6,14 @@ import { ProductSeleCol } from "../parts/ProductSeleCol";
 export const HomeProductZone = () => {
   return (
     <main>
-      <div className="pb-[82px]">
-        <div className="flex flex-col gap-20">
-          <ProductSeleCol />
-          <ProductMainDish />
-          <ProductSaladsSnacks />
-          <ProductDessert />
+      <div className="container m-auto">
+        <div className="pb-[82px]">
+          <div className="flex flex-col gap-20">
+            <ProductSeleCol />
+            <ProductMainDish />
+            <ProductSaladsSnacks />
+            <ProductDessert />
+          </div>
         </div>
       </div>
     </main>

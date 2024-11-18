@@ -7,7 +7,7 @@ import { PineconeLogo } from "../svg/PineconeLogo";
 export const Header = () => {
   return (
     <header>
-      <div className=" container m-auto max-w-[1200px]">
+      <div className="container m-auto">
         <div className="flex justify-between py-2 px-6">
           <div className="flex gap-6">
             <PineconeLogo />
