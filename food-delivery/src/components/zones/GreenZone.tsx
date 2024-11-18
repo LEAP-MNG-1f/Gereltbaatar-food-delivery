@@ -5,7 +5,7 @@ export const GreenZone = () => {
     <main>
       <div className="bg-BrandGreen h-[780px] flex items-center justify-center relative overflow-hidden">
         <HeeIcon />
-        <div className="container m-auto  h-full max-w-[1200px]">
+        <div className="container m-auto  h-full">
           <div className="flex items-center justify-between h-full">
             <div className="flex flex-col gap-6 max-w-[384px]">
               <p className="font-Poppins font-semibold text-white text-[55px] leading-[90%] tracking-[0.55px]">
