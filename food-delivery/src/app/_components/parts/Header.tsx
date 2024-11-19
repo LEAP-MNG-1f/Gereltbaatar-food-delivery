@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { CartIcon } from "../svg/CartIcon";
 import { PineconeLogo } from "../svg/PineconeLogo";
+import { ProfileIcon } from "../svg/ProfileIcon";
 
 export const Header = () => {
   return (
@@ -34,9 +35,15 @@ export const Header = () => {
                 </button>
               </div>
             </div>
-            <div className="flex items-center gap-2 px-4 py-2">
-              <CartIcon />
-              <p className="font-bold text-sm tracking-[-0.3px]">Сагс</p>
+            <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2 px-4 py-2">
+                <CartIcon />
+                <p className="font-bold text-sm tracking-[-0.3px]">Сагс</p>
+              </div>
+              <div className="flex items-center gap-2 px-4 py-2">
+                <ProfileIcon />
+                <p className="font-bold text-sm tracking-[-0.3px]">Нэвтрэх</p>
+              </div>
             </div>
           </div>
         </div>

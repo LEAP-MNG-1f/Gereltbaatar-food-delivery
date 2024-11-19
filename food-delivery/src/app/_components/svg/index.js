@@ -9,3 +9,4 @@ export * from "./FacebookIcon";
 export * from "./BookIcon";
 export * from "./FoodIngredientsIcon ";
 export * from "./OclocklIcon";
+export * from "./ProfileIcon";
