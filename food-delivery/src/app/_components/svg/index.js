@@ -11,3 +11,4 @@ export * from "./FoodIngredientsIcon ";
 export * from "./OclocklIcon";
 export * from "./ProfileIcon";
 export * from "./GetOutIcon";
+export * from "./CloseIcon";
