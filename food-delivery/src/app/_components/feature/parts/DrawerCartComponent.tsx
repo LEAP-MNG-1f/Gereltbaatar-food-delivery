@@ -1,4 +1,4 @@
-import { CloseIcon } from "../svg/CloseIcon";
+import { CloseIcon } from "../../ui/svg/CloseIcon";
 
 export const DrawerCartComponent = () => {
   return (

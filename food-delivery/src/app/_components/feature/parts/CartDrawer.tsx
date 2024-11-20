@@ -1,10 +1,9 @@
-"use client";
-
 import * as React from "react";
 import SwipeableDrawer from "@mui/material/SwipeableDrawer";
-import { CartIcon } from "../svg/CartIcon";
-import { GetOutIcon } from "../svg/GetOutIcon";
+
 import { DrawerCartComponent } from "./DrawerCartComponent";
+import { CartIcon } from "../../ui/svg/CartIcon";
+import { GetOutIcon } from "../../ui/svg/GetOutIcon";
 
 type Anchor = "right";
 

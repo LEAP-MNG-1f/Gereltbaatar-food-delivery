@@ -1,9 +1,7 @@
-"use client";
-
 import * as React from "react";
-import { BookIcon } from "../svg/BookIcon";
-import { OclocklIcon } from "../svg/OclocklIcon";
-import { FoodIngredientsIcon } from "../svg/FoodIngredientsIcon";
+import { BookIcon } from "../../ui/svg/BookIcon";
+import { OclocklIcon } from "../../ui/svg/OclocklIcon";
+import { FoodIngredientsIcon } from "../../ui/svg/FoodIngredientsIcon";
 
 export const FoodNewsCard = () => {
   return (

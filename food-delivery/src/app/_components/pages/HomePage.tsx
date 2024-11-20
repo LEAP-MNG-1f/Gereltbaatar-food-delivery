@@ -1,8 +1,10 @@
-import { FoodNewsCard } from "../parts/FoodNewsCard";
-import { Footer } from "../parts/Footer";
-import { Header } from "../parts/Header";
-import { GreenZone } from "../zones/GreenZone";
-import { HomeProductZone } from "../zones/HomeProductZone";
+"use client";
+
+import { FoodNewsCard } from "../feature/parts/FoodNewsCard";
+import { Footer } from "../feature/parts/Footer";
+import { Header } from "../feature/parts/Header";
+import { GreenZone } from "../feature/zones/GreenZone";
+import { HomeProductZone } from "../feature/zones/HomeProductZone";
 
 const HomePage = () => {
   return (

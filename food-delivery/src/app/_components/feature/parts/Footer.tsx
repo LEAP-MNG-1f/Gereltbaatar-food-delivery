@@ -1,12 +1,10 @@
-"use client";
-
-import { HeeFooterIcon } from "../svg/HeeFooterIcon";
+import { HeeFooterIcon } from "../../ui/svg/HeeFooterIcon";
 import * as React from "react";
-import { PineconeLogoWhite } from "../svg/PineconeLogoWhite";
+import { PineconeLogoWhite } from "../../ui/svg/PineconeLogoWhite";
 import Link from "@mui/material/Link";
-import { TwitterIcon } from "../svg/TwitterIcon";
-import { InstagramIcon } from "../svg/InstagramIcon";
-import { FacebookIcon } from "../svg/FacebookIcon";
+import { TwitterIcon } from "../../ui/svg/TwitterIcon";
+import { InstagramIcon } from "../../ui/svg/InstagramIcon";
+import { FacebookIcon } from "../../ui/svg/FacebookIcon";
 
 export const Footer = () => {
   return (

@@ -1,11 +1,9 @@
-"use client";
+import { DialogButton } from "../parts/DialogButton";
+import { FoodProductCardPropsArray } from "../parts/FoodProductCard";
 
 type FoodProductCardProps = {
   products?: FoodProductCardPropsArray[];
 };
-
-import { DialogButton } from "../parts/DialogButton";
-import { FoodProductCardPropsArray } from "../parts/FoodProductCard";
 
 export const MenuProductZone = (props: FoodProductCardProps) => {
   return (
@@ -26,3 +24,5 @@ export const MenuProductZone = (props: FoodProductCardProps) => {
     </div>
   );
 };
+
+//DialogButton

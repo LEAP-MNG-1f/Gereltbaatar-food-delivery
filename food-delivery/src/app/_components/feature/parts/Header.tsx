@@ -1,12 +1,13 @@
-"use client";
-
 import Link from "next/link";
-import * as React from "react";
-import { PineconeLogo } from "../svg/PineconeLogo";
-import { ProfileIcon } from "../svg/ProfileIcon";
+import { PineconeLogo } from "../../ui/svg/PineconeLogo";
+import { ProfileIcon } from "../../ui/svg/ProfileIcon";
 import { CartDrawer } from "./CartDrawer";
+import { HeaderButton } from "../../ui/buttons/HeaderButton";
+import { usePathname } from "next/navigation";
 
 export const Header = () => {
+  const pathname = usePathname();
+
   return (
     <header>
       <div className="bg-white w-full fixed z-50">
@@ -17,22 +18,24 @@ export const Header = () => {
               <div className="flex gap-2 items-center">
                 <button>
                   <Link href="/">
-                    <p className="px-4 py-2 font-bold text-sm leading-4 tracking-[-0.2px]">
-                      НҮҮР
-                    </p>
+                    <HeaderButton text="НҮҮР" pathname={pathname} path="/" />
                   </Link>
                 </button>
                 <button>
                   <Link href="/menu">
-                    <p className="px-4 py-2 font-bold text-sm leading-4 tracking-[-0.2px]">
-                      ХООЛНЫ ЦЭС
-                    </p>
+                    <HeaderButton
+                      text="ХООЛНЫ ЦЭС"
+                      pathname={pathname}
+                      path="/menu"
+                    />
                   </Link>
                 </button>
                 <button>
-                  <p className="px-4 py-2 font-bold text-sm leading-4 tracking-[-0.2px]">
-                    ХҮРГЭЛТИЙН БҮС
-                  </p>
+                  <HeaderButton
+                    text="ХҮРГЭЛТИЙН БҮС"
+                    pathname={pathname}
+                    path="deliveryZone"
+                  />
                 </button>
               </div>
             </div>
