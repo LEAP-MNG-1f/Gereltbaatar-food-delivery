@@ -2,7 +2,7 @@
 
 import { Footer } from "../feature/parts/Footer";
 import { Header } from "../feature/parts/Header";
-import { FoodProductCardPropsArray } from "../feature/parts/FoodProductCard";
+import { FoodProductCardPropsArray } from "../ui/cards/FoodProductCard";
 import { CategoryZone } from "../feature/zones/CategoryZone";
 import { MenuProductZone } from "../feature/zones/MenuProductZone";
 

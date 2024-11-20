@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { CategoryState } from "../parts/CategoryState";
+import { CategoryState } from "../../ui/buttons/CategoryState";
 
 export const CategoryZone = () => {
   const [focus, setFocus] = useState("Breakfast");

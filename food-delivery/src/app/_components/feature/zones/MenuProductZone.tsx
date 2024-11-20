@@ -1,5 +1,5 @@
 import { DialogButton } from "../parts/DialogButton";
-import { FoodProductCardPropsArray } from "../parts/FoodProductCard";
+import { FoodProductCardPropsArray } from "../../ui/cards/FoodProductCard";
 
 type FoodProductCardProps = {
   products?: FoodProductCardPropsArray[];
