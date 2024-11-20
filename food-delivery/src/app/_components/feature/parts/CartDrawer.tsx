@@ -1,7 +1,7 @@
 import * as React from "react";
 import SwipeableDrawer from "@mui/material/SwipeableDrawer";
 
-import { DrawerCartComponent } from "./DrawerCartComponent";
+import { DrawerCartCard } from "../../ui/cards/DrawerCartCard";
 import { CartIcon } from "../../ui/svg/CartIcon";
 import { GetOutIcon } from "../../ui/svg/GetOutIcon";
 
@@ -45,8 +45,12 @@ export const CartDrawer = () => {
                     <p className="font-Poppins text-xl font-black">Таны сагс</p>
                     <div></div>
                   </div>
-                  <div className="h-full px-6">
-                    <DrawerCartComponent />
+                  <div className="h-[600px] px-6 overflow-scroll scrollbar-none">
+                    <DrawerCartCard />
+                    <DrawerCartCard />
+                    <DrawerCartCard />
+                    <DrawerCartCard />
+                    <DrawerCartCard />
                   </div>
                 </div>
                 <div className="grid grid-cols-2 items-center justify-between py-[10px] px-8 h-[172px] shadow-black shadow-2xl">

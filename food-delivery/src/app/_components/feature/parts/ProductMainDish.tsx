@@ -1,5 +1,5 @@
 import { GreenStarIcon } from "../../ui/svg/GreenStarIcon";
-import { FoodProductCard } from "./FoodProductCard";
+import { FoodProductCard } from "../../ui/cards/FoodProductCard";
 
 export const ProductMainDish = () => {
   return (

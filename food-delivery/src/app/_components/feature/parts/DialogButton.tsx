@@ -5,7 +5,12 @@ import Dialog from "@mui/material/Dialog";
 import IconButton from "@mui/material/IconButton";
 import CloseIcon from "@mui/icons-material/Close";
 import Typography from "@mui/material/Typography";
-import { FoodProductCard, FoodProductCardPropsArray } from "./FoodProductCard";
+import {
+  FoodProductCard,
+  FoodProductCardPropsArray,
+} from "../../ui/cards/FoodProductCard";
+import { PlusIcon } from "../../ui/svg/PlusIcon";
+import { MinusIcon } from "../../ui/svg/MinusIcon";
 
 export const DialogButton = (props: FoodProductCardPropsArray) => {
   const [open, setOpen] = React.useState(false);
@@ -67,7 +72,7 @@ export const DialogButton = (props: FoodProductCardPropsArray) => {
               <Typography className="!text-lg !font-Poppins !font-semibold !not-italic ">
                 Орц
               </Typography>
-              <div className="p-2 bg-[#F6F6F6] rounded-lg">
+              <div className="p-2 bg-[#F6F6F6] rounded-lg leading-[normal] font-normal">
                 <p className="text-[#767676]">{props.ingredient}</p>
               </div>
             </div>
@@ -77,20 +82,16 @@ export const DialogButton = (props: FoodProductCardPropsArray) => {
               </p>
             </div>
             <div className="flex justify-between">
-              <button className="bg-BrandGreen w-[45px] h-[45px] rounded-[10px]">
-                <p className="font-Inter font-black text-xl not-italic text-white">
-                  -
-                </p>
+              <button className="flex items-center justify-center bg-BrandGreen w-[45px] h-[45px] rounded-[10px]">
+                <MinusIcon />
               </button>
               <div className="px-[30px] py-2  flex items-center justify-center">
                 <p className="font-Poppins font-semibold not-italic text-base ">
                   0
                 </p>
               </div>
-              <button className="bg-BrandGreen w-[45px] h-[45px] rounded-[10px]">
-                <p className="font-Inter font-black text-xl not-italic text-white">
-                  +
-                </p>
+              <button className="flex items-center justify-center  bg-BrandGreen w-[45px] h-[45px] rounded-[10px]">
+                <PlusIcon />
               </button>
             </div>
             <div className="">

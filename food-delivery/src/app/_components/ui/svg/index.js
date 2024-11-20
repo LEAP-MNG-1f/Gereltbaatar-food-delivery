@@ -12,3 +12,5 @@ export * from "./OclocklIcon";
 export * from "./ProfileIcon";
 export * from "./GetOutIcon";
 export * from "./CloseIcon";
+export * from "./PlusIcon";
+export * from "./MinusIcon";
