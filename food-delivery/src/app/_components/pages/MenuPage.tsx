@@ -1,8 +1,10 @@
-import { Footer } from "../parts/Footer";
-import { Header } from "../parts/Header";
-import { CategoryZone } from "../zones/CategoryZone";
-import { MenuProductZone } from "../zones/MenuProductZone";
-import { FoodProductCardPropsArray } from "../parts/FoodProductCard";
+"use client";
+
+import { Footer } from "../feature/parts/Footer";
+import { Header } from "../feature/parts/Header";
+import { FoodProductCardPropsArray } from "../feature/parts/FoodProductCard";
+import { CategoryZone } from "../feature/zones/CategoryZone";
+import { MenuProductZone } from "../feature/zones/MenuProductZone";
 
 const ProductArray: FoodProductCardPropsArray[] = [
   {

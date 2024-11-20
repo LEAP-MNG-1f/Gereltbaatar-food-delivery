@@ -1,4 +1,4 @@
-import { HeeIcon } from "../svg/HeeIcon";
+import { HeeIcon } from "../../ui/svg/HeeIcon";
 
 export const GreenZone = () => {
   return (

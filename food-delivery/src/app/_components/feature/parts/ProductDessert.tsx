@@ -1,4 +1,4 @@
-import { GreenStarIcon } from "../svg/GreenStarIcon";
+import { GreenStarIcon } from "../../ui/svg/GreenStarIcon";
 import { FoodProductCard } from "./FoodProductCard";
 
 export const ProductDessert = () => {

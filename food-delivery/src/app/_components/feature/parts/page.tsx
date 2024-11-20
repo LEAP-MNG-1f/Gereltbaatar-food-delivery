@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
-import HomePage from "./_components/pages/HomePage";
+import HomePage from "../../pages/HomePage";
 
 export default function Home() {
   const fetchData = async () => {
@@ -24,7 +24,6 @@ export default function Home() {
   return (
     <main>
       <HomePage />
-      {/* <CartDrawer /> */}
     </main>
   );
 }
