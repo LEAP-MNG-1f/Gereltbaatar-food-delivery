@@ -1,19 +1,27 @@
+//--------------------------------[ import ]--------------------------------//
+
 import express from "express";
 import cors from "cors";
 import { v2 as cloudinary } from "cloudinary";
 
+//--------------------------------[ const ]--------------------------------//
+
 const server = express();
 const PORT = 4000;
 
+//--------------------------------[ use ]--------------------------------//
+
 server.use(cors());
+
+//--------------------------------[ CRUD ]--------------------------------//
 
 server.get("/", (_, response) => {
   response.send("server is live");
 });
 
 //--------------------------------[ cloudinary ]--------------------------------//
+
 server.post("/cloutinry", async (req, response) => {
-  // response.send("post ajilah");
   try {
     cloudinary.config({
       cloud_name: "dl5irqaz6",
@@ -35,7 +43,14 @@ server.post("/cloutinry", async (req, response) => {
     console.log(error);
   }
 });
-//--------------------------------[ cloudinary ]--------------------------------//
+
+//--------------------------------[ listen ]--------------------------------//
+
+server.listen(PORT, () => {
+  console.log(`server is running on http://localhost:${PORT}`);
+});
+
+//--------------------------------[ TEST CODE ]--------------------------------//
 
 //   async function () {
 //     // Upload an image
@@ -72,6 +87,6 @@ server.post("/cloutinry", async (req, response) => {
 //   }
 // )();
 
-server.listen(PORT, () => {
-  console.log(`server is running on http://localhost:${PORT}`);
-});
+//--------------------------------[ TEST CODE ]--------------------------------//
+
+// cloudibaryEnvUrl = "CLOUDINARY_URL=cloudinary://434461591186227:aGk_UYX9uk6E2zgNu7W6rCxjpqs@dl5irqaz6"
