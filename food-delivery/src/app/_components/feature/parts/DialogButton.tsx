@@ -1,6 +1,3 @@
-"use cleant";
-
-import * as React from "react";
 import Dialog from "@mui/material/Dialog";
 import IconButton from "@mui/material/IconButton";
 import CloseIcon from "@mui/icons-material/Close";
@@ -11,9 +8,10 @@ import {
 } from "../../ui/cards/FoodProductCard";
 import { PlusIcon } from "../../ui/svg/PlusIcon";
 import { MinusIcon } from "../../ui/svg/MinusIcon";
+import { useState } from "react";
 
 export const DialogButton = (props: FoodProductCardPropsArray) => {
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -23,7 +21,7 @@ export const DialogButton = (props: FoodProductCardPropsArray) => {
   };
 
   return (
-    <React.Fragment>
+    <>
       <button onClick={handleClickOpen}>
         <FoodProductCard
           image={props.image}
@@ -102,6 +100,6 @@ export const DialogButton = (props: FoodProductCardPropsArray) => {
           </div>
         </div>
       </Dialog>
-    </React.Fragment>
+    </>
   );
 };

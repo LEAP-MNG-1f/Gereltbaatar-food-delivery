@@ -1,32 +1,66 @@
-import * as React from "react";
 import SwipeableDrawer from "@mui/material/SwipeableDrawer";
-
 import { DrawerCartCard } from "../../ui/cards/DrawerCartCard";
 import { CartIcon } from "../../ui/svg/CartIcon";
+import { MouseEvent, useState, KeyboardEvent } from "react";
 import { GetOutIcon } from "../../ui/svg/GetOutIcon";
+import Stack from "@mui/material/Stack";
+import Badge from "@mui/material/Badge";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
+
+//----------------------[MUI - change customr color]----------------------//
+
+declare module "@mui/material/styles" {
+  interface PaletteOptions {
+    customColor?: string;
+  }
+  interface Palette {
+    customColor?: string;
+  }
+}
+
+const theme = createTheme({
+  palette: {
+    customColor: "#18BA51",
+  },
+});
+
+//----------------------[MUI - change customr color]----------------------//
 
 type Anchor = "right";
 
 export const CartDrawer = () => {
-  const [state, setState] = React.useState({
+  const [state, setState] = useState({
     right: false,
   });
 
   const toggleDrawer =
-    (anchor: Anchor, open: boolean) =>
-    (event: React.KeyboardEvent | React.MouseEvent) => {
+    (anchor: Anchor, open: boolean) => (event: KeyboardEvent | MouseEvent) => {
       setState({ ...state, [anchor]: open });
     };
 
   return (
     <div>
       {(["right"] as const).map((anchor) => (
-        <React.Fragment key={anchor}>
+        <div key={anchor}>
           <button
             className="flex items-center gap-2 px-4 py-2"
             onClick={toggleDrawer(anchor, true)}
           >
-            <CartIcon />
+            <Stack spacing={4} direction="row" sx={{ color: "customColor" }}>
+              <ThemeProvider theme={theme}>
+                <Badge
+                  sx={{
+                    "& .MuiBadge-badge": {
+                      backgroundColor: theme.palette.customColor,
+                      color: "white",
+                    },
+                  }}
+                  badgeContent={21}
+                >
+                  <CartIcon />
+                </Badge>
+              </ThemeProvider>
+            </Stack>
             <p className="font-bold text-sm tracking-[-0.3px]">Сагс</p>
           </button>
           <SwipeableDrawer
@@ -67,10 +101,8 @@ export const CartDrawer = () => {
               </div>
             </div>
           </SwipeableDrawer>
-        </React.Fragment>
+        </div>
       ))}
     </div>
   );
 };
-
-// CartDrawer
