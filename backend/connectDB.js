@@ -6,6 +6,7 @@ try {
   connecttion = await client.connect();
 } catch (e) {
   console.error(e);
+  console.log("test");
 }
 let db = connecttion.db("sample_training");
 
