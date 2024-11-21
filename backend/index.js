@@ -4,6 +4,9 @@ import express from "express";
 import cors from "cors";
 import { v2 as cloudinary } from "cloudinary";
 import { MongoClient } from "mongodb";
+import dotenv from "dotenv";
+import db from "./connectDB.js";
+dotenv.config();
 
 //--------------------------------[ const ]--------------------------------//
 
@@ -16,8 +19,10 @@ server.use(cors());
 
 //--------------------------------[ CRUD ]--------------------------------//
 
-server.get("/", (_, response) => {
-  response.send("server is live");
+server.get("/", async (_, response) => {
+  let collection = await db.collection("users");
+  let results = await collection.find({});
+  console.log(results);
 });
 
 //--------------------------------[ MongoDB ]--------------------------------//
