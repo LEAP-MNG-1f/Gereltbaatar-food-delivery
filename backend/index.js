@@ -3,10 +3,11 @@
 import express from "express";
 import cors from "cors";
 import { v2 as cloudinary } from "cloudinary";
-import { MongoClient } from "mongodb";
-import dotenv from "dotenv";
+// import dotenv from "dotenv";
 import db from "./connectDB.js";
-dotenv.config();
+import connectDB from "./connectDB.js";
+
+// dotenv.config();
 
 //--------------------------------[ const ]--------------------------------//
 
@@ -20,8 +21,13 @@ server.use(cors());
 //--------------------------------[ CRUD ]--------------------------------//
 
 server.get("/", async (_, response) => {
-  let collection = await db.collection("users");
-  let results = await collection.find({});
+  const data = await connectDB();
+  let collection = data.collection("movies");
+  let results = await collection.find().limit(10).toArray();
+  response.json({
+    sucsess: true,
+    data: results,
+  });
   console.log(results);
 });
 
