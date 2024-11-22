@@ -6,6 +6,7 @@ import { v2 as cloudinary } from "cloudinary";
 // import dotenv from "dotenv";
 import db from "./connectDB.js";
 import connectDB from "./connectDB.js";
+import { ObjectId } from "mongodb";
 
 // dotenv.config();
 
@@ -53,6 +54,70 @@ server.post("/cloutinry", async (req, response) => {
 
     console.log(uploadResult);
     response.send("post ajilah");
+  } catch (error) {
+    console.log(error);
+  }
+});
+
+//--------------------------------[ POST MongoDB ]--------------------------------//
+
+server.post("/food", async (req, response) => {
+  const data = await connectDB();
+  try {
+    let collection = data.collection("product");
+    let results = await collection.insertOne({
+      name: "s10 samsung utas",
+      email: "gereltbaatar@gmail.com",
+      price: 1000,
+    });
+    response.json({
+      sucsess: true,
+      results: results,
+    });
+  } catch (error) {
+    console.log(error);
+  }
+});
+
+//--------------------------------[ PUT MongoDB ]--------------------------------//
+
+server.put("/food", async (req, response) => {
+  const data = await connectDB();
+  try {
+    let collection = data.collection("product");
+    let results = await collection.findOneAndUpdate(
+      {
+        _id: new ObjectId("6740021e3b69673679449acd"),
+      },
+      {
+        $set: {
+          price: "8800",
+          date: new Date(),
+        },
+      }
+    );
+    response.json({
+      sucsess: true,
+      results: results,
+    });
+  } catch (error) {
+    console.log(error);
+  }
+});
+
+//--------------------------------[ DELETE MongoDB ]--------------------------------//
+
+server.delete("/food", async (req, response) => {
+  const data = await connectDB();
+  try {
+    let collection = data.collection("product");
+    let results = await collection.deleteOne({
+      _id: new ObjectId("6740021e3b69673679449acd"),
+    });
+    response.json({
+      sucsess: true,
+      results: results,
+    });
   } catch (error) {
     console.log(error);
   }
