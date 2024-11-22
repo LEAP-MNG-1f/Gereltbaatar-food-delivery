@@ -18,6 +18,7 @@ const MenuPage = () => {
       console.log("MongoDB data:", realData);
     } catch (error) {
       console.error("Fetch error:", error);
+      console.log("aldaa garlaa");
     }
   };
 
