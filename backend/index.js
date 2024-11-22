@@ -1,12 +1,11 @@
 //--------------------------------[ import ]--------------------------------//
 
-import express from "express";
+import express, { response } from "express";
 import cors from "cors";
 import { v2 as cloudinary } from "cloudinary";
 // import dotenv from "dotenv";
-import db from "./connectDB.js";
-import connectDB from "./connectDB.js";
 import { ObjectId } from "mongodb";
+import connectiondb from "./connectDB.js";
 
 // dotenv.config();
 
@@ -21,9 +20,9 @@ server.use(cors());
 
 //--------------------------------[ CRUD ]--------------------------------//
 
-server.get("/", async (_, response) => {
-  const data = await connectDB();
-  let collection = data.collection("movies");
+server.get("/food-information", async (_, response) => {
+  const data = await connectiondb();
+  let collection = data.collection("product");
   let results = await collection.find().limit(10).toArray();
   response.json({
     sucsess: true,
@@ -32,11 +31,25 @@ server.get("/", async (_, response) => {
   console.log(results);
 });
 
-//--------------------------------[ MongoDB ]--------------------------------//
+//--------------------------------[ MongoDB post]--------------------------------//
+
+server.post("/create-food-product", async (request, response) => {
+  try {
+    const data = await connectiondb();
+    const productData = data.collection("product");
+    const results = await productData.insertOne({});
+    response.json({
+      sucsess: true,
+      data: results,
+    });
+  } catch (error) {
+    console.log(error);
+  }
+});
 
 //--------------------------------[ cloudinary ]--------------------------------//
 
-server.post("/cloutinry", async (req, response) => {
+server.post("/cloutinry", async (request, response) => {
   try {
     cloudinary.config({
       cloud_name: "dl5irqaz6",
@@ -61,8 +74,8 @@ server.post("/cloutinry", async (req, response) => {
 
 //--------------------------------[ POST MongoDB ]--------------------------------//
 
-server.post("/food", async (req, response) => {
-  const data = await connectDB();
+server.post("/food", async (request, response) => {
+  const data = await connectiondb();
   try {
     let collection = data.collection("product");
     let results = await collection.insertOne({
@@ -81,8 +94,8 @@ server.post("/food", async (req, response) => {
 
 //--------------------------------[ PUT MongoDB ]--------------------------------//
 
-server.put("/food", async (req, response) => {
-  const data = await connectDB();
+server.put("/food", async (request, response) => {
+  const data = await connectiondb();
   try {
     let collection = data.collection("product");
     let results = await collection.findOneAndUpdate(
@@ -107,8 +120,8 @@ server.put("/food", async (req, response) => {
 
 //--------------------------------[ DELETE MongoDB ]--------------------------------//
 
-server.delete("/food", async (req, response) => {
-  const data = await connectDB();
+server.delete("/food", async (request, response) => {
+  const data = await connectiondb();
   try {
     let collection = data.collection("product");
     let results = await collection.deleteOne({
