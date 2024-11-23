@@ -14,3 +14,6 @@ export * from "./GetOutIcon";
 export * from "./CloseIcon";
 export * from "./PlusIcon";
 export * from "./MinusIcon";
+export * from "./CheckIcon";
+export * from "./CircleBlueIcon";
+export * from "./LocationIcon";

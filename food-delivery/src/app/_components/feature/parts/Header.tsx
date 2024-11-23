@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import { PineconeLogo } from "../../ui/svg/PineconeLogo";
 import { ProfileIcon } from "../../ui/svg/ProfileIcon";

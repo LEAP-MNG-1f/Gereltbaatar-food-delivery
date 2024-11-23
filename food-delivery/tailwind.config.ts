@@ -12,11 +12,15 @@ export default {
       colors: {
         BrandGreen: "#18BA51",
         TextSecondary: "#272727",
+        BrandBlue: "#0468C8",
       },
       fontFamily: {
         Poppins: ["Poppins", "sans-serif"],
         Comfortaa: ["Comfortaa", "sans-serif"],
         Inter: ["Inter", "sans-serif"],
+      },
+      boxShadow: {
+        customShadow: "0px 0px 20px 0px rgba(0, 0, 0, 0.1)",
       },
     },
   },

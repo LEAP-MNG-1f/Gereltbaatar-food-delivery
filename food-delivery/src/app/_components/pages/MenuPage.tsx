@@ -2,12 +2,20 @@
 
 import { Footer } from "../feature/parts/Footer";
 import { Header } from "../feature/parts/Header";
-import { FoodProductCardPropsArray } from "../ui/cards/FoodProductCard";
+import { realData } from "../ui/cards/FoodProductCard";
 import { CategoryZone } from "../feature/zones/CategoryZone";
 import { MenuProductZone } from "../feature/zones/MenuProductZone";
 import { useEffect } from "react";
 
-const ProductArray: FoodProductCardPropsArray[] = [];
+const ProductArray: realData[] = [
+  {
+    image:
+      "https://images.immediate.co.uk/production/volatile/sites/30/2022/08/Corndogs-7832ef6.jpg?quality=90&resize=556,505",
+    ingredient: "Хулуу, төмс, лууван , сонгино, цөцгийн тос, самрын үр ",
+    name: "American Recipes",
+    price: 9000,
+  },
+];
 
 const MenuPage = () => {
   const fetchData = async () => {
@@ -17,7 +25,7 @@ const MenuPage = () => {
       const realData = responsedata.data;
       console.log("MongoDB data:", realData);
     } catch (error) {
-      console.error("Fetch error:", error);
+      console.log("Fetch error:", error);
     }
   };
 

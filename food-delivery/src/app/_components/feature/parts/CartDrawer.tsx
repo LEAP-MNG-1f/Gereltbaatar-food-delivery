@@ -1,11 +1,12 @@
 import SwipeableDrawer from "@mui/material/SwipeableDrawer";
 import { DrawerCartCard } from "../../ui/cards/DrawerCartCard";
 import { CartIcon } from "../../ui/svg/CartIcon";
-import { MouseEvent, useState, KeyboardEvent } from "react";
+import { MouseEvent, KeyboardEvent, useState } from "react";
 import { GetOutIcon } from "../../ui/svg/GetOutIcon";
 import Stack from "@mui/material/Stack";
 import Badge from "@mui/material/Badge";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
+import Link from "next/link";
 
 //----------------------[MUI - change customr color]----------------------//
 
@@ -94,9 +95,11 @@ export const CartDrawer = () => {
                     </p>
                     <p className="text-lg font-bold">34,800₮</p>
                   </div>
-                  <div className="flex items-center justify-center bg-BrandGreen py-2 px-4 flex-[1_0_0] rounded-[4px]">
-                    <p className="font-Poppins text-white">Захиалах</p>
-                  </div>
+                  <Link href={"/checkout"} className="w-full">
+                    <button className="w-full flex items-center justify-center bg-BrandGreen py-2 px-4 flex-[1_0_0] rounded-[4px]">
+                      <p className="font-Poppins text-white">Захиалах</p>
+                    </button>
+                  </Link>
                 </div>
               </div>
             </div>
