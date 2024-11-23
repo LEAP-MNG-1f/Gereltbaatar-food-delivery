@@ -1,8 +1,8 @@
 import { DialogButton } from "../parts/DialogButton";
-import { FoodProductCardPropsArray } from "../../ui/cards/FoodProductCard";
+import { realData } from "../../ui/cards/FoodProductCard";
 
 type FoodProductCardProps = {
-  products?: FoodProductCardPropsArray[];
+  products?: realData[];
 };
 
 export const MenuProductZone = (props: FoodProductCardProps) => {

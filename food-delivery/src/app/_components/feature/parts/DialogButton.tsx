@@ -2,15 +2,12 @@ import Dialog from "@mui/material/Dialog";
 import IconButton from "@mui/material/IconButton";
 import CloseIcon from "@mui/icons-material/Close";
 import Typography from "@mui/material/Typography";
-import {
-  FoodProductCard,
-  FoodProductCardPropsArray,
-} from "../../ui/cards/FoodProductCard";
+import { FoodProductCard, realData } from "../../ui/cards/FoodProductCard";
 import { PlusIcon } from "../../ui/svg/PlusIcon";
 import { MinusIcon } from "../../ui/svg/MinusIcon";
 import { useState } from "react";
 
-export const DialogButton = (props: FoodProductCardPropsArray) => {
+export const DialogButton = (props: realData) => {
   const [open, setOpen] = useState(false);
 
   const handleClickOpen = () => {
@@ -51,7 +48,7 @@ export const DialogButton = (props: FoodProductCardPropsArray) => {
         <div className="flex gap-[33px] p-8 rounded-2xl bg-white">
           <div
             style={{
-              background: "url('./pizza.png')",
+              background: `url('./${props.image}')`,
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}

@@ -9,7 +9,7 @@ import Typography from "@mui/material/Typography";
 
 //--------------------------[Props type zone]--------------------------//
 
-export type FoodProductCardPropsArray = {
+export type realData = {
   _id?: string;
   name?: string;
   image?: string;
@@ -19,7 +19,7 @@ export type FoodProductCardPropsArray = {
 
 //--------------------------[Props type zone]--------------------------//
 
-export const FoodProductCard = (props: FoodProductCardPropsArray) => {
+export const FoodProductCard = (props: realData) => {
   return (
     <div className="flex flex-col gap-[14px]">
       <div className="">
