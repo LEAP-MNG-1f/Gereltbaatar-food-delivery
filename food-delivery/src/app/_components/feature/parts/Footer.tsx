@@ -37,12 +37,12 @@ export const Footer = () => {
                       Холбоо барих
                     </p>
                   </Link>
-                  <Link href="" color="#fff">
+                  <Link href="/menu" color="#fff">
                     <p className="font-Poppins text-base font-semibold not-italic">
                       Хоолны цэс
                     </p>
                   </Link>
-                  <Link href="" color="#fff">
+                  <Link href="/delivery-zone" color="#fff">
                     <p className="font-Poppins text-base font-semibold not-italic">
                       Хүргэлтийн бүс
                     </p>

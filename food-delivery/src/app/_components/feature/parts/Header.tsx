@@ -33,11 +33,13 @@ export const Header = () => {
                   </Link>
                 </button>
                 <button>
-                  <HeaderButton
-                    text="ХҮРГЭЛТИЙН БҮС"
-                    pathname={pathname}
-                    path="deliveryZone"
-                  />
+                  <Link href={"/delivery-zone"}>
+                    <HeaderButton
+                      text="ХҮРГЭЛТИЙН БҮС"
+                      pathname={pathname}
+                      path="/delivery-zone"
+                    />
+                  </Link>
                 </button>
               </div>
             </div>
