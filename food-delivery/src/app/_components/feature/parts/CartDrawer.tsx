@@ -80,7 +80,7 @@ export const CartDrawer = () => {
                     <p className="font-Poppins text-xl font-black">Таны сагс</p>
                     <div></div>
                   </div>
-                  <div className="2xl:h-[920px] h-[610px] px-6 overflow-scroll scrollbar-none">
+                  <div className="2xl:h-[840px] h-[610px] px-6 overflow-scroll scrollbar-none">
                     <DrawerCartCard />
                     <DrawerCartCard />
                     <DrawerCartCard />

@@ -4,6 +4,7 @@ import { useState } from "react";
 import { CheckToggleB } from "../../ui/buttons/CheckToggleB";
 import { CircleBlueToggle } from "../../ui/buttons/CircleBlueToggle";
 import { LocationIcon } from "../../ui/svg/LocationIcon";
+import { CheckoutCard } from "../../ui/cards/CheckoutCard";
 
 export const CheckoutContentZone = () => {
   const [toggleOne, setToggleOne] = useState(true);
@@ -136,8 +137,8 @@ export const CheckoutContentZone = () => {
               </div>
               <div className="p-6 w-full h-full rounded-2xl shadow-customShadow">
                 <div className="flex flex-col items-stretch h-full">
-                  <div className="h-full border border-solid border-black">
-                    card
+                  <div className="h-[477px] overflow-scroll scrollbar-none ">
+                    <CheckoutCard />
                   </div>
                   <div className="grid grid-cols-2 gap-[10px] items-center">
                     <div>
