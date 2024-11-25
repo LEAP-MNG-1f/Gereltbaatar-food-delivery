@@ -5,8 +5,13 @@ export const DeliveryContentZone = () => {
     <main>
       <div className="container m-auto pt-[57px]">
         <div className="flex flex-col gap-10">
-          <div className="mt-[61px] border border-solid border-black w-full max-h-[616px]">
-            google maps
+          <div className="mt-[61px] w-full max-h-[616px]">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d684517.4321359023!2d106.06339707615062!3d47.9190455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5d96930069209819%3A0xf44fb2dad8fa20b2!2z0KHSr9GF0LHQsNCw0YLQsNGA0YvQvSDRgtCw0LvQsdCw0Lk!5e0!3m2!1smn!2smn!4v1732522828115!5m2!1smn!2smn"
+              loading="lazy"
+              height={616}
+              className="w-full h-[616px]"
+            />
           </div>
           <div className="flex flex-col gap-[22px]">
             <div className="flex items-center py-4">
