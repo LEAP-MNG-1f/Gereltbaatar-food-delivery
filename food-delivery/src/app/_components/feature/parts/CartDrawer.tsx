@@ -71,7 +71,7 @@ export const CartDrawer = () => {
             onOpen={toggleDrawer(anchor, true)}
           >
             <div className="max-w-[586px] w-[586px] h-full">
-              <div className="flex flex-col justify-between gap-10 h-full">
+              <div className="flex flex-col justify-between h-full">
                 <div className="">
                   <div className="flex justify-between py-[26px] px-6 items-center">
                     <button onClick={toggleDrawer(anchor, false)}>
@@ -80,7 +80,17 @@ export const CartDrawer = () => {
                     <p className="font-Poppins text-xl font-black">Таны сагс</p>
                     <div></div>
                   </div>
-                  <div className="h-[600px] px-6 overflow-scroll scrollbar-none">
+                  <div className="h-[900px] px-6 overflow-scroll scrollbar-none">
+                    <DrawerCartCard />
+                    <DrawerCartCard />
+                    <DrawerCartCard />
+                    <DrawerCartCard />
+                    <DrawerCartCard />
+                    <DrawerCartCard />
+                    <DrawerCartCard />
+                    <DrawerCartCard />
+                    <DrawerCartCard />
+                    <DrawerCartCard />
                     <DrawerCartCard />
                     <DrawerCartCard />
                     <DrawerCartCard />
