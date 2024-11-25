@@ -2,12 +2,12 @@ import Dialog from "@mui/material/Dialog";
 import IconButton from "@mui/material/IconButton";
 import CloseIcon from "@mui/icons-material/Close";
 import Typography from "@mui/material/Typography";
-import { FoodProductCard, realData } from "../../ui/cards/FoodProductCard";
+import { FoodProductCard, foodData } from "../../ui/cards/FoodProductCard";
 import { PlusIcon } from "../../ui/svg/PlusIcon";
 import { MinusIcon } from "../../ui/svg/MinusIcon";
 import { useState } from "react";
 
-export const DialogButton = (props: realData) => {
+export const DialogButton = (props: foodData) => {
   const [open, setOpen] = useState(false);
 
   const handleClickOpen = () => {
@@ -48,12 +48,18 @@ export const DialogButton = (props: realData) => {
         <div className="flex gap-[33px] p-8 rounded-2xl bg-white">
           <div
             style={{
-              background: `url('./${props.image}')`,
+              background: `url('${props.image}')`,
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}
-            className="w-[500px] h-[500px] bg-center bg-cover"
-          ></div>
+            className="w-[500px] h-[500px] bg-center bg-cover flex items-center justify-center"
+          >
+            {/* <img
+              src={props.image}
+              alt=""
+              className="flex items-center justify-center"
+            /> */}
+          </div>
           <div className="flex flex-col gap-8 justify-center">
             <div className="flex flex-col gap-[2px]">
               <Typography className="!font-Poppins !font-bold !not-italic !text-[28px]">

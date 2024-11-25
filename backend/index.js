@@ -5,8 +5,8 @@ import cors from "cors";
 import { v2 as cloudinary } from "cloudinary";
 // import dotenv from "dotenv";
 import mongoose from "mongoose";
-// import productModel from "./model/product.js";
 import userRouter from "./routes/userRoute.js";
+import foodRouter from "./routes/foodRoute.js";
 
 // dotenv.config();
 
@@ -19,8 +19,7 @@ const PORT = 4000;
 
 server.use(cors());
 server.use("/api", userRouter);
-
-//--------------------------------[ CRUD ]--------------------------------//
+server.use("/api", foodRouter);
 
 mongoose.connect(
   "mongodb+srv://mglgerelt:VmaUhczrxg9VHGmb@gereltbaatardata.1cupz.mongodb.net/food-delivery"
@@ -72,14 +71,3 @@ server.listen(PORT, () => {
 //--------------------------------[ TEST CODE ]--------------------------------//
 
 // cloudibaryEnvUrl = "CLOUDINARY_URL=cloudinary://434461591186227:aGk_UYX9uk6E2zgNu7W6rCxjpqs@dl5irqaz6"
-
-// server.get("/food-information", async (_, response) => {
-//   const data = await connectiondb();
-//   let collection = data.collection("product");
-//   let results = await collection.find().limit(10).toArray();
-//   response.json({
-//     sucsess: true,
-//     data: results,
-//   });
-//   console.log(results);
-// });
