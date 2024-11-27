@@ -22,8 +22,8 @@ const orderSchema = new mongoose.Schema({
     default: "active",
   },
   createdDate: {
-    type: Number,
-    date: new Date(),
+    type: Date,
+    default: Date.now(),
   },
   district: {
     type: String,
