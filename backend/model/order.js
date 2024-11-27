@@ -16,6 +16,13 @@ const orderSchema = new mongoose.Schema({
     ref: "User",
     required: true,
   },
+  foods: [
+    {
+      type: mongoose.SchemaTypes.ObjectId,
+      ref: "Food",
+      required: true,
+    },
+  ],
   process: {
     type: String,
     enum: Enum,

@@ -8,6 +8,7 @@ import mongoose from "mongoose";
 import { foodRouter } from "./routes/foodRoute.js";
 import { userRouter } from "./routes/userRoute.js";
 import { orderRouter } from "./routes/orderRoute.js";
+import { categoryRouter } from "./routes/categoryRouter.js";
 
 // dotenv.config();
 
@@ -22,6 +23,7 @@ server.use(cors());
 server.use("/api", userRouter);
 server.use("/api", foodRouter);
 server.use("/api", orderRouter);
+server.use("/api", categoryRouter);
 
 mongoose.connect(
   "mongodb+srv://mglgerelt:gereltbaatar2131243432@gereltbaatardata.1cupz.mongodb.net/food-delivery"

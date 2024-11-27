@@ -14,28 +14,36 @@ const createUser = async (request, response) => {
       data: result,
     });
   } catch (e) {
-    console.log(e);
+    console.log("Create user data failed");
   }
 };
 
 const getAllUsers = async (request, response) => {
-  const result = await User.find({});
+  try {
+    const result = await User.find({});
 
-  response.json({
-    succse: true,
-    data: result,
-  });
+    response.json({
+      succse: true,
+      data: result,
+    });
+  } catch (e) {
+    console.log("Fetch user data failed");
+  }
 };
 
 const deleteUser = async (request, response) => {
-  const result = await User.findByIdAndDelete({
-    _id: "674403aedb26f09c11694e78",
-  });
+  try {
+    const result = await User.findByIdAndDelete({
+      _id: "674403aedb26f09c11694e78",
+    });
 
-  response.json({
-    succse: true,
-    data: result,
-  });
+    response.json({
+      succse: true,
+      data: result,
+    });
+  } catch (e) {
+    console.log("Delete user in failed");
+  }
 };
 
 export { createUser, getAllUsers, deleteUser };
