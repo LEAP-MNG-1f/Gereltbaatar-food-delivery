@@ -7,7 +7,7 @@ export const DeliveryContentZone = () => {
         <div className="flex flex-col gap-10">
           <div className="mt-[61px] w-full max-h-[616px]">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d684517.4321359023!2d106.06339707615062!3d47.9190455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5d96930069209819%3A0xf44fb2dad8fa20b2!2z0KHSr9GF0LHQsNCw0YLQsNGA0YvQvSDRgtCw0LvQsdCw0Lk!5e0!3m2!1smn!2smn!4v1732522828115!5m2!1smn!2smn"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d119144.83940302734!2d106.75185959468295!3d47.88639843539851!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5d96929f21c4c285%3A0xfefdd7f982c0df3f!2sUlaanbaatar%2C%20Mongolia!5e0!3m2!1sen!2smn!4v1693145957697!5m2!1sen!2smn"
               loading="lazy"
               height={616}
               className="w-full h-[616px]"
