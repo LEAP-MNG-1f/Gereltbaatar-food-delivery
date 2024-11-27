@@ -1,19 +1,23 @@
-import { FoodNewsCard } from "../parts/FoodNewsCard";
-import { Footer } from "../parts/Footer";
-import { Header } from "../parts/Header";
-import { GreenZone } from "../zones/GreenZone";
-import { HomeProductZone } from "../zones/HomeProductZone";
-
-const HomePage = () => {
-  return (
-    <main className="">
-      <Header />
-      <GreenZone />
-      <FoodNewsCard />
-      <HomeProductZone />
-      <Footer />
-    </main>
-  );
-};
-
-export default HomePage;
+const people = [
+  {
+    name: "John Doe",
+    age: 16,
+    phone: "123-456-7890",
+  },
+  {
+    name: "Jane Doe",
+    age: 20,
+  },
+  {
+    name: "Jim Doe",
+    age: 25,
+  },
+  {
+    name: "Jill Doe",
+    age: 30,
+  },
+  {
+    name: "Jack Doe",
+    age: 35,
+  },
+];
