@@ -2,7 +2,7 @@ import { Food } from "../model/food.js";
 
 const createFood = async (request, response) => {
   try {
-    const result = await Food.create({
+    const result = await Food.ins({
       name: "Mexican Tacos",
       price: 9500,
       image:

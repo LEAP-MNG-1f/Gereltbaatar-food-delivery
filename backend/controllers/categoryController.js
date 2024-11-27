@@ -3,7 +3,7 @@ import { Category } from "../model/category.js";
 const createCategory = async (request, response) => {
   try {
     const result = await Category.create({
-      name: "Салад ба зууш",
+      name: "Үндсэн хоол",
     });
     response.json({
       succes: true,
