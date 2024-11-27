@@ -17,3 +17,6 @@ export * from "./MinusIcon";
 export * from "./CheckIcon";
 export * from "./CircleBlueIcon";
 export * from "./LocationIcon";
+export * from "./DownArrowWhite";
+export * from "./DownArrow";
+export * from "./LocationIconWhite";

@@ -5,6 +5,9 @@ import { CheckToggleB } from "../../ui/buttons/CheckToggleB";
 import { CircleBlueToggle } from "../../ui/buttons/CircleBlueToggle";
 import { LocationIcon } from "../../ui/svg/LocationIcon";
 import { CheckoutCard } from "../../ui/cards/CheckoutCard";
+import { SelectDistrict } from "../../ui/inputs/SelectDistrict";
+import { SelectKhoroo } from "../../ui/inputs/SelectKhoroo";
+import { SelectApartment } from "../../ui/inputs/SelectApartment";
 
 export const CheckoutContentZone = () => {
   const [toggleOne, setToggleOne] = useState(true);
@@ -49,15 +52,9 @@ export const CheckoutContentZone = () => {
                   <p className="text-start  text-sm font-normal leading-[normal]">
                     Хаяг аа оруулна уу
                   </p>
-                  <div className="py-2 px-4 bg-[#F7F7F8] border border-solid border-[#ECEDF0] rounded">
-                    <LocationIcon />
-                  </div>
-                  <div className="py-2 px-4 bg-[#F7F7F8] border border-solid border-[#ECEDF0] rounded">
-                    <LocationIcon />
-                  </div>
-                  <div className="py-2 px-4 bg-[#F7F7F8] border border-solid border-[#ECEDF0] rounded">
-                    <LocationIcon />
-                  </div>
+                  <SelectDistrict />
+                  <SelectKhoroo />
+                  <SelectApartment />
                 </div>
                 <div className="flex flex-col gap-8">
                   <div className="flex flex-col gap-1">
