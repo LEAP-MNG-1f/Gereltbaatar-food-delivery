@@ -1,13 +1,12 @@
-import { Footer } from "../feature/parts/Footer";
-import { Header } from "../feature/parts/Header";
 import { DeliveryContentZone } from "../feature/zones/DeliveryContentZone";
+import MainLayout from "../layout/MainLayout";
 
 const DeliveryZonePage = () => {
   return (
     <main>
-      <Header />
-      <DeliveryContentZone />
-      <Footer />
+      <MainLayout>
+        <DeliveryContentZone />
+      </MainLayout>
     </main>
   );
 };

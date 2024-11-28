@@ -1,10 +1,9 @@
 "use client";
 
-import { Footer } from "../feature/parts/Footer";
-import { Header } from "../feature/parts/Header";
 import { CategoryZone } from "../feature/zones/CategoryZone";
 import { MenuProductZone } from "../feature/zones/MenuProductZone";
 import { useEffect, useState } from "react";
+import MainLayout from "../layout/MainLayout";
 
 const MenuPage = () => {
   const [foodData, setFoodData] = useState([]);
@@ -29,10 +28,10 @@ const MenuPage = () => {
 
   return (
     <main>
-      <Header />
-      <CategoryZone />
-      <MenuProductZone products={foodData} />
-      <Footer />
+      <MainLayout>
+        <CategoryZone />
+        <MenuProductZone products={foodData} />
+      </MainLayout>
     </main>
   );
 };

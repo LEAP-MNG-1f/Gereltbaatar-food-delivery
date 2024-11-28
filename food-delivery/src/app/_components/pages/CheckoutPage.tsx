@@ -1,13 +1,12 @@
-import { Footer } from "../feature/parts/Footer";
-import { Header } from "../feature/parts/Header";
 import { CheckoutContentZone } from "../feature/zones/CheckoutContentZone";
+import MainLayout from "../layout/MainLayout";
 
 const CheckoutPage = () => {
   return (
     <main>
-      <Header />
-      <CheckoutContentZone />
-      <Footer />
+      <MainLayout>
+        <CheckoutContentZone />
+      </MainLayout>
     </main>
   );
 };
