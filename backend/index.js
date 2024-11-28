@@ -3,19 +3,23 @@
 import express from "express";
 import cors from "cors";
 import { v2 as cloudinary } from "cloudinary";
-// import dotenv from "dotenv";
+import dotenv from "dotenv";
 import mongoose from "mongoose";
 import { foodRouter } from "./routes/foodRoute.js";
 import { userRouter } from "./routes/userRoute.js";
 import { orderRouter } from "./routes/orderRoute.js";
 import { categoryRouter } from "./routes/categoryRouter.js";
 
-// dotenv.config();
+dotenv.config();
 
 //--------------------------------[ const ]--------------------------------//
 
 const server = express();
 const PORT = 4000;
+
+//--------------------------------[ connection URL ]--------------------------------//
+
+mongoose.connect(process.env.MONGODB_URL);
 
 //--------------------------------[ use ]--------------------------------//
 
@@ -24,10 +28,6 @@ server.use("/api", userRouter);
 server.use("/api", foodRouter);
 server.use("/api", orderRouter);
 server.use("/api", categoryRouter);
-
-mongoose.connect(
-  "mongodb+srv://mglgerelt:gereltbaatar2131243432@gereltbaatardata.1cupz.mongodb.net/food-delivery"
-);
 
 //--------------------------------[ listen ]--------------------------------//
 
@@ -74,4 +74,4 @@ server.listen(PORT, () => {
 
 //--------------------------------[ TEST CODE ]--------------------------------//
 
-// cloudibaryEnvUrl = "CLOUDINARY_URL=cloudinary://434461591186227:aGk_UYX9uk6E2zgNu7W6rCxjpqs@dl5irqaz6"
+// cloudinaryEnvUrl = ""
