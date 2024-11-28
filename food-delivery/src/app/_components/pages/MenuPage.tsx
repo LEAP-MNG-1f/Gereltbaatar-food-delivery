@@ -6,21 +6,21 @@ import { useEffect, useState } from "react";
 import MainLayout from "../layout/MainLayout";
 
 const MenuPage = () => {
-  const [foodData, setFoodData] = useState([]);
+  const [foodDatas, setfoodDatas] = useState([]);
   const fetchData = async () => {
     try {
       const response = await fetch("http://localhost:4000/api/foods");
       const responsedata = await response.json();
       const data = responsedata.data;
-      setFoodData(data);
+      setfoodDatas(data);
     } catch (error) {
       console.log("Fetch error:", error);
     }
   };
 
-  console.log("MongoDB data:", foodData);
+  console.log("MongoDB data:", foodDatas);
 
-  foodData: [] = [];
+  foodDatas: [] = [];
 
   useEffect(() => {
     fetchData();
@@ -30,7 +30,7 @@ const MenuPage = () => {
     <main>
       <MainLayout>
         <CategoryZone />
-        <MenuProductZone products={foodData} />
+        <MenuProductZone products={foodDatas} />
       </MainLayout>
     </main>
   );
