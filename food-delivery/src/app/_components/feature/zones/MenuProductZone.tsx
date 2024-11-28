@@ -1,5 +1,5 @@
 import { DialogButton } from "../parts/DialogButton";
-import { foodDatas } from "../../ui/cards/FoodProductCard";
+import { foodDatas } from "../../data/DataType";
 
 type FoodProductCardProps = {
   products?: foodDatas[];

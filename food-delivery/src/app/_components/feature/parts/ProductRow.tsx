@@ -1,7 +1,7 @@
 import { GreenStarIcon } from "../../ui/svg/GreenStarIcon";
 import { FoodProductCard } from "../../ui/cards/FoodProductCard";
 
-export const ProductSeleCol = () => {
+export const ProductRow = () => {
   return (
     <div className="">
       <div className="flex flex-col gap-6">
@@ -17,22 +17,22 @@ export const ProductSeleCol = () => {
           <FoodProductCard
             image="./FoodImg.png"
             name="Өглөөний хоол"
-            price={24800}
+            price={"24800"}
           />
           <FoodProductCard
             image="./FoodImg.png"
             name="Өглөөний хоол"
-            price={24800}
+            price={"24800"}
           />
           <FoodProductCard
             image="./FoodImg.png"
             name="Өглөөний хоол"
-            price={24800}
+            price={"24800"}
           />
           <FoodProductCard
             image="./FoodImg.png"
             name="Өглөөний хоол"
-            price={24800}
+            price={"24800"}
           />
         </div>
       </div>

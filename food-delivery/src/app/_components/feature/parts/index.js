@@ -1,5 +1,5 @@
 export * from "./Header";
-export * from "./ProductSeleCol";
+export * from "./ProductRow";
 export * from "./Footer";
 export * from "./Dialog";
 export * from "./CartDrawer";

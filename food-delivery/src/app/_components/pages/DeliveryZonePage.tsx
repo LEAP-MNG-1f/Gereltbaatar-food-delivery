@@ -1,3 +1,4 @@
+import { Loading } from "../feature/parts/Loading";
 import { DeliveryContentZone } from "../feature/zones/DeliveryContentZone";
 import MainLayout from "../layout/MainLayout";
 
@@ -5,7 +6,8 @@ const DeliveryZonePage = () => {
   return (
     <main>
       <MainLayout>
-        <DeliveryContentZone />
+        {/* <DeliveryContentZone /> */}
+        <Loading />
       </MainLayout>
     </main>
   );

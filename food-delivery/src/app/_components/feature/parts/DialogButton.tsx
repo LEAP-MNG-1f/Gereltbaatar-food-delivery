@@ -2,10 +2,11 @@ import Dialog from "@mui/material/Dialog";
 import IconButton from "@mui/material/IconButton";
 import CloseIcon from "@mui/icons-material/Close";
 import Typography from "@mui/material/Typography";
-import { FoodProductCard, foodDatas } from "../../ui/cards/FoodProductCard";
+import { FoodProductCard } from "../../ui/cards/FoodProductCard";
 import { PlusIcon } from "../../ui/svg/PlusIcon";
 import { MinusIcon } from "../../ui/svg/MinusIcon";
 import { useState } from "react";
+import { foodDatas } from "../../data/DataType";
 
 export const DialogButton = (props: foodDatas) => {
   const [open, setOpen] = useState(false);

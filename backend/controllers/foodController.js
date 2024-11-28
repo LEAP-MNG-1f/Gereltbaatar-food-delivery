@@ -4,7 +4,7 @@ const createFood = async (request, response) => {
   try {
     const result = await Food.ins({
       name: "Mexican Tacos",
-      price: 9500,
+      price: "9,500",
       image:
         "https://s23209.pcdn.co/wp-content/uploads/2019/04/Mexican-Street-TacosIMG_9091.jpg",
       categoryId: "6746a10d121cbc7de5bb74b4",

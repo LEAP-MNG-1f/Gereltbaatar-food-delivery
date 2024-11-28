@@ -4,20 +4,9 @@ import * as React from "react";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
+import { foodDatas } from "../../data/DataType";
 
 //--------------------------[Import zone]--------------------------//
-
-//--------------------------[Props type zone]--------------------------//
-
-export type foodDatas = {
-  _id?: string;
-  name?: string;
-  image?: string;
-  ingredient?: string;
-  price?: number;
-};
-
-//--------------------------[Props type zone]--------------------------//
 
 export const FoodProductCard = (props: foodDatas) => {
   return (
