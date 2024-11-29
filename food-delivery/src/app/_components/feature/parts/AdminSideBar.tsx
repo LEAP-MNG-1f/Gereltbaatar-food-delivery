@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { AdminCategoryState } from "../../ui/buttons/AdminCategoryState";
+import { AdminCreateCategory } from "../../ui/buttons/AdminCreateCategory";
 
 export const AdminSideBar = () => {
   const [focus, setFocus] = useState("Breakfast");
@@ -9,7 +10,7 @@ export const AdminSideBar = () => {
   };
 
   return (
-    <div className="flex flex-col gap-10 max-w-[302px] w-full h-full bg-white py-[26px] px-6">
+    <div className="flex flex-col gap-10 max-w-[302px] w-full h-full bg-white py-[26px] pr-6">
       <p className="font-Poppins font-bold text-[22px] text-[#272727] not-italic leading-[norma]">
         Food menu
       </p>
@@ -38,6 +39,7 @@ export const AdminSideBar = () => {
             text="Desserts"
           />
         </button>
+        <AdminCreateCategory />
       </div>
     </div>
   );

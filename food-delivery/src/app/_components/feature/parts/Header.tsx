@@ -14,7 +14,7 @@ export const Header = () => {
     <header>
       <div className="bg-white w-full fixed z-50">
         <div className="container m-auto">
-          <div className="flex justify-between py-2 px-6">
+          <div className="flex justify-between py-2">
             <div className="flex gap-6">
               <PineconeLogo />
               <div className="flex gap-2 items-center">
@@ -48,7 +48,7 @@ export const Header = () => {
                 <CartDrawer />
               </div>
 
-              <div className="flex items-center gap-2 px-4 py-2">
+              <div className="flex items-center gap-2 pl-4 py-2">
                 <ProfileIcon />
                 <p className="font-bold text-sm tracking-[-0.3px]">Нэвтрэх</p>
               </div>

@@ -1,5 +1,5 @@
-import { MorevertBlack } from "../svg/morevertBlack";
-import { MorevertWhite } from "../svg/morevertWhite";
+import { MorevertBlack } from "../svg/MorevertBlack";
+import { MorevertWhite } from "../svg/MorevertWhite";
 
 type AdminCategoryStateType = {
   text?: string;
@@ -14,10 +14,10 @@ export const AdminCategoryState = ({
 }: AdminCategoryStateType) => {
   return (
     <div
-      className={`group border border-[#D6D8DB] hover:border-BrandGreen duration-300 py-2 px-4 rounded-lg flex justify-between items-center ${
+      className={`group border  hover:border-BrandGreen duration-300 py-2 px-4 rounded-lg flex justify-between items-center ${
         focus === buttonName
-          ? "bg-BrandGreen text-white "
-          : "bg-white text-black"
+          ? "bg-BrandGreen text-white border-BrandGreen"
+          : "bg-white text-black border-[#D6D8DB]"
       }`}
     >
       <p className="font-Inter font-[500] not-italic text-lg tracking-[-0.396px]">
