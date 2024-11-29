@@ -10,6 +10,7 @@ const createOrder = async (request, response) => {
       foods: "6746a1a0929e845194026e8f",
       khoroo: "3-р хороо",
       apartment: "Нархан хотхон",
+      phoneNumber: "85910226",
     });
     response.json({
       succes: true,

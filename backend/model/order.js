@@ -1,6 +1,7 @@
 import mongoose from "mongoose";
 
-const Enum = ["active", "progress", "waiting", "delivered"];
+const processEnum = ["active", "progress", "waiting", "delivered"];
+const paymentTypeEnum = ["cash", "card"];
 
 const orderSchema = new mongoose.Schema({
   orderNumber: {
@@ -25,7 +26,7 @@ const orderSchema = new mongoose.Schema({
   ],
   process: {
     type: String,
-    enum: Enum,
+    enum: processEnum,
     default: "active",
   },
   createdDate: {
@@ -43,6 +44,18 @@ const orderSchema = new mongoose.Schema({
   apartment: {
     type: String,
     required: true,
+  },
+  phoneNumber: {
+    type: String,
+    required: true,
+  },
+  paymentType: {
+    type: String,
+    enum: paymentTypeEnum,
+    default: "cash",
+  },
+  detail: {
+    type: String,
   },
 });
 
