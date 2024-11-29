@@ -3,12 +3,11 @@ import { foodData } from "../../data/DataType";
 import { ProductRow } from "../parts/ProductRow";
 
 type HomeProductZoneProps = {
-  foodDatas?: foodData[];
+  foodData?: foodData[];
 };
 
-export const HomeProductZone = ({ foodDatas }: HomeProductZoneProps) => {
-  const groupedData = groupBy(foodDatas, (foods) => foods.categoryId?.name);
-  console.log("qwdqwdaw", Object.keys(groupedData));
+export const HomeProductZone = ({ foodData }: HomeProductZoneProps) => {
+  const groupedData = groupBy(foodData, (foods) => foods.categoryId?.name);
 
   return (
     <main>

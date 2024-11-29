@@ -6,9 +6,9 @@ import { FoodProductCard } from "../../ui/cards/FoodProductCard";
 import { PlusIcon } from "../../ui/svg/PlusIcon";
 import { MinusIcon } from "../../ui/svg/MinusIcon";
 import { useState } from "react";
-import { foodDatas } from "../../data/DataType";
+import { foodData } from "../../data/DataType";
 
-export const DialogButton = (props: foodDatas) => {
+export const DialogButton = (props: foodData) => {
   const [open, setOpen] = useState(false);
 
   const handleClickOpen = () => {

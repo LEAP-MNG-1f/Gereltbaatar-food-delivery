@@ -4,11 +4,11 @@ import * as React from "react";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
-import { foodDatas } from "../../data/DataType";
+import { foodData } from "../../data/DataType";
 
 //--------------------------[Import zone]--------------------------//
 
-export const FoodProductCard = (props: foodDatas) => {
+export const FoodProductCard = (props: foodData) => {
   return (
     <div className="flex flex-col gap-[14px]">
       <div className="">

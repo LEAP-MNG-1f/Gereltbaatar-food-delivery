@@ -20,8 +20,6 @@ const HomePage = () => {
     }
   };
 
-  console.log("MongoDB data homePage:", foodDatas);
-
   useEffect(() => {
     fetchData();
   }, []);
@@ -31,7 +29,7 @@ const HomePage = () => {
       <MainLayout>
         <GreenZone />
         <FoodNewsCard />
-        <HomeProductZone foodDatas={foodDatas} />
+        <HomeProductZone foodData={foodDatas} />
       </MainLayout>
     </main>
   );

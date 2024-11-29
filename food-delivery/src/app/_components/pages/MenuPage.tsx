@@ -18,8 +18,6 @@ const MenuPage = () => {
     }
   };
 
-  console.log("MongoDB data:", foodDatas);
-
   useEffect(() => {
     fetchData();
   }, []);
