@@ -5,11 +5,10 @@ import { HomeProductZone } from "../feature/zones/HomeProductZone";
 import MainLayout from "../layout/MainLayout";
 import { FoodNewsCard } from "../ui/cards/FoodNewsCard";
 import { useEffect, useState } from "react";
-import { groupBy } from "lodash";
-import { Food } from "../data/DataType.js";
+import { foodData } from "../data/DataType.js";
 
 const HomePage = () => {
-  const [foodDatas, setfoodDatas] = useState<Food[]>([]);
+  const [foodDatas, setfoodDatas] = useState<foodData[]>([]);
   const fetchData = async () => {
     try {
       const response = await fetch("http://localhost:4000/api/foods");
@@ -27,14 +26,12 @@ const HomePage = () => {
     fetchData();
   }, []);
 
-  const groupedDatas = groupBy(foodDatas, (foods) => foods.categoryId?.name);
-
   return (
     <main>
       <MainLayout>
         <GreenZone />
         <FoodNewsCard />
-        <HomeProductZone />
+        <HomeProductZone foodDatas={foodDatas} />
       </MainLayout>
     </main>
   );
