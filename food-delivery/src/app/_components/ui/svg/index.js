@@ -20,3 +20,5 @@ export * from "./LocationIcon";
 export * from "./DownArrowWhite";
 export * from "./DownArrow";
 export * from "./LocationIconWhite";
+export * from "./MorevertBlack";
+export * from "./MorevertWhite";

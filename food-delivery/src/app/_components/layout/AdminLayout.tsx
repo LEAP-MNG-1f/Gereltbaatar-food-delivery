@@ -1,4 +1,4 @@
-import { AdminCategoryZone } from "../feature/parts/AdminCategoryZone";
+import { AdminCategoryZone } from "../feature/zones/AdminCategoryZone";
 import { Header } from "../feature/parts/Header";
 
 export default function AdminLayout({
