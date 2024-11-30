@@ -15,9 +15,12 @@ export const AdminContent = () => {
           </div>
         </button>
       </div>
-      <div className="border border-black">
-        <div className="">
+      <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center gap-8">
           <AddGreenIcon />
+          <p className="text-[#808080] text-center text-base not-italic font-normal leading-normal">
+            Уучлаарай, Таны меню хоосон байна.
+          </p>
         </div>
       </div>
     </div>
