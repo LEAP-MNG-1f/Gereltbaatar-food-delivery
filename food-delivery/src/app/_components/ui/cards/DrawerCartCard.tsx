@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { CloseIcon } from "../svg/CloseIcon";
 import { MinusIcon } from "../svg/MinusIcon";
 import { PlusIcon } from "../svg/PlusIcon";
@@ -7,8 +8,13 @@ export const DrawerCartCard = () => {
     <div className="border border-[#D6D8DB] border-x-0">
       <div className="py-6">
         <div className="grid grid-cols-2 gap-4 p-4">
-          <div className="">
-            <img src="./PizzaDrawer.png" alt="" />
+          <div className="relative">
+            <Image
+              src="/PizzaDrawer.png"
+              alt="Pizza"
+              layout="fill"
+              objectFit="cover"
+            />
           </div>
           <div className="flex flex-col gap-2">
             <div className="flex items-center justify-between">
