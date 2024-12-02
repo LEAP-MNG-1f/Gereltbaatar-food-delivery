@@ -24,3 +24,5 @@ export * from "./MorevertWhite";
 export * from "./MorevertBlack";
 export * from "./AddGrayIcon";
 export * from "./AddGreenIcon";
+export * from "./EditIcon";
+export * from "./TrashIcon";
