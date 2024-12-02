@@ -1,5 +1,6 @@
 import { MorevertBlack } from "../svg/MorevertBlack";
 import { MorevertWhite } from "../svg/MorevertWhite";
+import { CategoryEditButton } from "./CategoryEditButton";
 
 type AdminCategoryStateType = {
   text?: string;
