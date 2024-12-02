@@ -1,12 +1,21 @@
 import { useState } from "react";
 import { AdminCategoryState } from "../../ui/buttons/AdminCategoryState";
 import { AdminCreateCategory } from "../../ui/buttons/AdminCreateCategory";
+import { categoryDatas } from "../../data/DataType";
 
-export const AdminSideBar = () => {
-  const [focus, setFocus] = useState("Breakfast");
+type AdminSideBarProps = {
+  categoryDatas?: categoryDatas[];
+};
 
-  const handelClikFocus = (button: string) => {
-    setFocus(button);
+export const AdminSideBar = ({ categoryDatas }: AdminSideBarProps) => {
+  const [focus, setFocus] = useState("6746aa0bc4b0fe49cd307e72");
+
+  const handelClikFocus = (button: string | undefined) => {
+    if (button !== undefined) {
+      setFocus(button);
+    } else {
+      // console.log("Утга байхгүй байна.");
+    }
   };
 
   return (
@@ -15,30 +24,21 @@ export const AdminSideBar = () => {
         Food menu
       </p>
       <div className="flex flex-col gap-[26px]">
-        <button onClick={() => handelClikFocus("Breakfast")}>
-          <AdminCategoryState
-            text="Breakfast"
-            focus={focus}
-            buttonName="Breakfast"
-          />
-        </button>
-        <button onClick={() => handelClikFocus("Soup")}>
-          <AdminCategoryState buttonName="Soup" focus={focus} text="Soup" />
-        </button>
-        <button onClick={() => handelClikFocus("Main course")}>
-          <AdminCategoryState
-            buttonName="Main course"
-            focus={focus}
-            text="Main course"
-          />
-        </button>
-        <button onClick={() => handelClikFocus("Desserts")}>
-          <AdminCategoryState
-            buttonName="Desserts"
-            focus={focus}
-            text="Desserts"
-          />
-        </button>
+        {categoryDatas?.map((categoryData) => {
+          return (
+            <button
+              key={categoryData._id}
+              onClick={() => handelClikFocus(categoryData?._id)}
+            >
+              <AdminCategoryState
+                text={categoryData?.name}
+                focus={focus}
+                buttonName={categoryData?._id}
+              />
+            </button>
+          );
+        })}
+
         <AdminCreateCategory />
       </div>
     </div>

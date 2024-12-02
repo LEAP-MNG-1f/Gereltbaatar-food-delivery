@@ -9,6 +9,7 @@ import { foodRouter } from "./routes/foodRoute.js";
 import { userRouter } from "./routes/userRoute.js";
 import { orderRouter } from "./routes/orderRoute.js";
 import { categoryRouter } from "./routes/categoryRouter.js";
+import bodyParser from "body-parser";
 
 dotenv.config();
 
@@ -24,6 +25,8 @@ mongoose.connect(process.env.MONGODB_URL);
 //--------------------------------[ use ]--------------------------------//
 
 server.use(cors());
+server.use(bodyParser.json());
+
 server.use("/api", userRouter);
 server.use("/api", foodRouter);
 server.use("/api", orderRouter);

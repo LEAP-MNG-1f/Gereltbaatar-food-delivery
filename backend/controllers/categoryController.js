@@ -2,9 +2,8 @@ import { Category } from "../model/category.js";
 
 const createCategory = async (request, response) => {
   try {
-    const result = await Category.create({
-      name: "Үндсэн хоол",
-    });
+    const result = await Category.create(request.body);
+
     response.json({
       succes: true,
       data: result,

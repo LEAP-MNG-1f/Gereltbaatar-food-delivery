@@ -9,9 +9,12 @@ import { foodData } from "../data/DataType.js";
 
 const HomePage = () => {
   const [foodDatas, setfoodDatas] = useState<foodData[]>([]);
+
+  const BACKEND_END_POINT = process.env.BACKEND_URL;
+
   const fetchData = async () => {
     try {
-      const response = await fetch("http://localhost:4000/api/foods");
+      const response = await fetch(`${BACKEND_END_POINT}/api/foods`);
       const responsedata = await response.json();
       const data = responsedata.data;
       setfoodDatas(data);

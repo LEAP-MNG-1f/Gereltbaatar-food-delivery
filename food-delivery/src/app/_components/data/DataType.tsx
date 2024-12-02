@@ -11,3 +11,9 @@ export type foodData = {
   price?: string;
   __v?: number;
 };
+
+export type categoryDatas = {
+  _id?: string | undefined;
+  name?: string;
+  __v?: number;
+};
