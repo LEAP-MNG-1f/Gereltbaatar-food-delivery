@@ -1,5 +1,6 @@
 import { AdminCategoryZone } from "../feature/zones/AdminCategoryZone";
 import { Header } from "../feature/parts/Header";
+import { AdminHeader } from "../feature/parts/AdminHeader";
 
 export default function AdminLayout({
   children,
@@ -8,7 +9,7 @@ export default function AdminLayout({
 }>) {
   return (
     <main>
-      <Header />
+      <AdminHeader />
       <AdminCategoryZone />
       {children}
     </main>

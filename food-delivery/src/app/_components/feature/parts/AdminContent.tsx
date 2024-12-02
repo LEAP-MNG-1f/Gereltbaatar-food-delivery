@@ -1,4 +1,5 @@
 import { AddGreenIcon } from "../../ui/svg/AddGreenIcon";
+import { CreateNewFood } from "./CreateNewFood";
 
 export const AdminContent = () => {
   return (
@@ -7,13 +8,7 @@ export const AdminContent = () => {
         <p className="font-Poppins font-bold text-[22px] text-[#272727] not-italic leading-[norma]">
           Breakfast
         </p>
-        <button>
-          <div className="flex items-center justify-center bg-BrandGreen py-2 px-4 rounded-[4px]">
-            <p className="text-white text-center font-Poppins text-base font-normal leading-normal">
-              add new food
-            </p>
-          </div>
-        </button>
+        <CreateNewFood />
       </div>
       <div className="flex flex-col items-center">
         <div className="flex flex-col items-center gap-8">
