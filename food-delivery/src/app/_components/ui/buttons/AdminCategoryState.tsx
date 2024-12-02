@@ -27,7 +27,3 @@ export const AdminCategoryState = ({
     </div>
   );
 };
-
-// MorevertWhite
-
-// MorevertBlack
