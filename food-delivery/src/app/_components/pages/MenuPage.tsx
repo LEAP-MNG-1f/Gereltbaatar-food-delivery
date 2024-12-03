@@ -9,8 +9,9 @@ import { foodData } from "../data/DataType";
 const MenuPage = () => {
   const [foodDatas, setFoodDatas] = useState<foodData[]>([]);
   const [categoryDatas, setCategoryDatas] = useState([]);
+  const [quantity, setQuantity] = useState(1);
   const [categoryValue, setCategoryValue] = useState(
-    "6746a10d121cbc7de5bb74b4"
+    "6746aa0bc4b0fe49cd307e72"
   );
 
   const BACKEND_END_POINT = process.env.BACKEND_URL;
@@ -53,7 +54,11 @@ const MenuPage = () => {
           categoryValue={categoryValue}
         />
 
-        <MenuProductZone products={filteredData} />
+        <MenuProductZone
+          quantity={quantity}
+          setQuantity={setQuantity}
+          products={filteredData}
+        />
       </MainLayout>
     </main>
   );
