@@ -1,11 +1,18 @@
 import { useState } from "react";
 import { CategoryState } from "../../ui/buttons/CategoryState";
+import { Dispatch, SetStateAction } from "react";
 
-export const CategoryZone = () => {
+type CategoryZoneProps = {
+  categoryValue?: string;
+  setCategoryValue?: Dispatch<SetStateAction<string>> | undefined;
+};
+
+export const CategoryZone = ({ setCategoryValue }: CategoryZoneProps) => {
   const [focus, setFocus] = useState("Breakfast");
 
   const handelClikFocus = (button: string) => {
     setFocus(button);
+    // setCategoryValue();
   };
 
   return (

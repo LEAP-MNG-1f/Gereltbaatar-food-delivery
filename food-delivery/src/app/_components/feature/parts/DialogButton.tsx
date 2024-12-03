@@ -89,7 +89,7 @@ export const DialogButton = (props: foodData) => {
               </button>
               <div className="px-[30px] py-2  flex items-center justify-center">
                 <p className="font-Poppins font-semibold not-italic text-base ">
-                  0
+                  1
                 </p>
               </div>
               <button className="flex items-center justify-center  bg-BrandGreen w-[45px] h-[45px] rounded-[10px]">

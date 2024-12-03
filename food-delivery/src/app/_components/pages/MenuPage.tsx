@@ -7,6 +7,8 @@ import MainLayout from "../layout/MainLayout";
 
 const MenuPage = () => {
   const [foodDatas, setfoodDatas] = useState([]);
+  const [categoryValue, setCategoryValue] = useState("Breakfast");
+
   const fetchData = async () => {
     try {
       const response = await fetch("http://localhost:4000/api/foods");
@@ -25,7 +27,10 @@ const MenuPage = () => {
   return (
     <main>
       <MainLayout>
-        <CategoryZone />
+        <CategoryZone
+          setCategoryValue={setCategoryValue}
+          categoryValue={categoryValue}
+        />
         <MenuProductZone products={foodDatas} />
       </MainLayout>
     </main>
