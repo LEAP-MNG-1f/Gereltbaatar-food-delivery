@@ -12,7 +12,7 @@ const AdminPage = () => {
 
   const fetchData = async () => {
     try {
-      const response = await fetch(`${BACKEND_END_POINT}/api/categorys`);
+      const response = await fetch(`${BACKEND_END_POINT}/categorys`);
       const responsedata = await response.json();
       const data = responsedata.data;
       setcategoryDatas(data);

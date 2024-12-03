@@ -7,12 +7,14 @@ import MainLayout from "../layout/MainLayout";
 
 const MenuPage = () => {
   const [foodDatas, setfoodDatas] = useState([]);
+
+  const BACKEND_END_POINT = process.env.BACKEND_URL;
+
   const fetchData = async () => {
     try {
-      const response = await fetch("http://localhost:4000/api/foods");
-      const responsedata = await response.json();
-      const data = responsedata.data;
-      setfoodDatas(data);
+      const response = await fetch(`${BACKEND_END_POINT}/foods`);
+      const datas = await response.json();
+      setfoodDatas(datas.data);
     } catch (error) {
       console.log("Fetch error:", error);
     }

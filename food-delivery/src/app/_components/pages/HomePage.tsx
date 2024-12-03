@@ -6,7 +6,6 @@ import MainLayout from "../layout/MainLayout";
 import { FoodNewsCard } from "../ui/cards/FoodNewsCard";
 import { useEffect, useState } from "react";
 import { foodData } from "../data/DataType.js";
-import { log } from "console";
 
 const HomePage = () => {
   const [foodDatas, setfoodDatas] = useState<foodData[]>([]);
@@ -15,16 +14,13 @@ const HomePage = () => {
 
   const fetchData = async () => {
     try {
-      const response = await fetch(`${BACKEND_END_POINT}/api/foods`);
-      const responsedata = await response.json();
-      const data = responsedata.data;
-      setfoodDatas(data);
+      const response = await fetch(`${BACKEND_END_POINT}/foods`);
+      const datas = await response.json();
+      setfoodDatas(datas.data);
     } catch (error) {
       console.log("Fetch error:", error);
     }
   };
-
-  console.log("foodDatas", foodDatas);
 
   useEffect(() => {
     fetchData();
