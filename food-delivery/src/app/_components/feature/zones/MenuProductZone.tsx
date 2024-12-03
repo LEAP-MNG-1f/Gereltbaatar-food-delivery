@@ -1,15 +1,20 @@
 import { DialogButton } from "../parts/DialogButton";
 import { foodData } from "../../data/DataType";
+import { groupBy } from "lodash";
 
 type FoodProductCardProps = {
   products?: foodData[];
 };
 
-export const MenuProductZone = (props: FoodProductCardProps) => {
+export const MenuProductZone = ({ products }: FoodProductCardProps) => {
+  const filteredData = groupBy(products, (product) => product.categoryId?.name);
+
+  console.log("filteredData", filteredData);
+
   return (
     <div className="container m-auto py-[54px]">
       <div className="grid grid-cols-4 gap-[26px]">
-        {props.products?.map((product, productIndex) => {
+        {products?.map((product, productIndex) => {
           return (
             <DialogButton
               key={productIndex}
