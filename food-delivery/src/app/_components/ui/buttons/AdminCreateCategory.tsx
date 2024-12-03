@@ -41,6 +41,7 @@ export const AdminCreateCategory = () => {
 
         if (!response.ok)
           throw new Error(`HTTP error! status: ${response.status}`);
+        handleClose();
       } catch (error) {
         console.error(error);
       }

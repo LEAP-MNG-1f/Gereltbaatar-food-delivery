@@ -56,7 +56,7 @@ export const CartDrawer = () => {
                       color: "white",
                     },
                   }}
-                  badgeContent={21}
+                  badgeContent={1}
                 >
                   <CartIcon />
                 </Badge>

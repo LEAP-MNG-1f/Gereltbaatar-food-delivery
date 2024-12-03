@@ -6,6 +6,7 @@ import MainLayout from "../layout/MainLayout";
 import { FoodNewsCard } from "../ui/cards/FoodNewsCard";
 import { useEffect, useState } from "react";
 import { foodData } from "../data/DataType.js";
+import { log } from "console";
 
 const HomePage = () => {
   const [foodDatas, setfoodDatas] = useState<foodData[]>([]);
@@ -22,6 +23,8 @@ const HomePage = () => {
       console.log("Fetch error:", error);
     }
   };
+
+  console.log("foodDatas", foodDatas);
 
   useEffect(() => {
     fetchData();
