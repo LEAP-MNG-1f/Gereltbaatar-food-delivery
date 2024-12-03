@@ -14,6 +14,7 @@ type DialogButtonProps = {
   quantity?: number | undefined;
   setQuantity?: Dispatch<SetStateAction<number>> | undefined;
 };
+//----------------------------------------------------------------------------->>
 
 export const DialogButton = ({
   product,
@@ -47,38 +48,47 @@ export const DialogButton = ({
 
   let drawerItems = JSON.parse(localStorage.getItem("items") || "[]");
 
-  //----------------------------------------------------------------------------->>
+  // //----------------------------------------------------------------------------->>
 
   const handleOnSbmit = (
-    _id?: string | undefined,
+    product?: foodData, // _id биш, product-г ашиглана
     quantity?: number | undefined
   ) => {
-    if (_id !== undefined && quantity !== undefined) {
+    if (product?._id !== undefined && quantity !== undefined) {
+      // Өмнө хадгалагдсан бүтээгдэхүүнүүдийг шалгах
       const existingItems = drawerItems.filter(
-        (drawerItem: { _id: string }) => drawerItem._id === _id
+        (drawerItem: { product: foodData; quantity: number }) =>
+          drawerItem.product._id === product?._id // _id-ийг ашиглах
       );
+
       if (existingItems.length > 0) {
-        let oldItems = JSON.parse(localStorage.getItem("items") || "[]");
-        let fillterOldItem = oldItems.filter(
-          (oldItem: { _id: string }) => oldItem._id === _id
+        const itemToUpdateId = existingItems[0].product._id; // Бүтээгдэхүүний _id
+        const newQuantity = existingItems[0].quantity + quantity; // Шинэ тоо хэмжээ
+
+        // Бүтээгдэхүүний тоо хэмжээг шинэчлэх
+        drawerItems = drawerItems.map(
+          (drawerItem: { product: foodData; quantity: number }) =>
+            drawerItem.product._id === itemToUpdateId
+              ? { ...drawerItem, quantity: newQuantity } // Тоо хэмжээг нэмэх
+              : drawerItem
         );
-        const sum = fillterOldItem[0].quantity + quantity;
-        fillterOldItem[0].quantity = sum;
-        drawerItems.push(fillterOldItem);
+
         localStorage.setItem("items", JSON.stringify(drawerItems));
       } else {
-        const newItem = { _id: _id, quantity: quantity };
-        drawerItems.push(newItem);
+        const newItem = {
+          product, // Бүтээгдэхүүний мэдээлэл
+          quantity: quantity, // Тоо хэмжээ
+        };
+        drawerItems.push(newItem); // Шинэ бүтээгдэхүүн нэмэх
+
         localStorage.setItem("items", JSON.stringify(drawerItems));
       }
     }
+    setQuantity?.(1); // Тоо хэмжээг анхны утганд тохируулах
+    setOpen(false); // Таглах
     // localStorage.removeItem("items");
   };
-
   //----------------------------------------------------------------------------->>
-  // localStorage.removeItem("items");
-  // setQuantity?.(1);
-  // setOpen(false);
 
   return (
     <>
@@ -166,7 +176,7 @@ export const DialogButton = ({
             </div>
             <div className="">
               <button
-                onClick={() => handleOnSbmit(product?._id, quantity)}
+                onClick={() => handleOnSbmit(product, quantity)}
                 className="w-full bg-BrandGreen py-2 px-4 rounded-[4px]"
               >
                 <p className="font-Poppins text-white">Сагслах</p>

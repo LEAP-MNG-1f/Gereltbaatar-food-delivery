@@ -10,10 +10,16 @@ export type foodData = {
   };
   price?: string;
   __v?: number;
+  quantity?: number;
 };
 
 export type categoryDatas = {
   _id?: string | undefined;
   name?: string;
   __v?: number;
+};
+
+export type drawerId = {
+  _id?: string | undefined;
+  quantity?: number;
 };

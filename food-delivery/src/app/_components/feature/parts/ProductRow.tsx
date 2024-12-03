@@ -1,13 +1,21 @@
 import { GreenStarIcon } from "../../ui/svg/GreenStarIcon";
-import { FoodProductCard } from "../../ui/cards/FoodProductCard";
 import { foodData } from "../../data/DataType";
+import { Dispatch, SetStateAction } from "react";
+import { DialogButton } from "./DialogButton";
 
 type foodsDataProps = {
   foodData?: foodData[];
+  quantity?: number;
+  setQuantity?: Dispatch<SetStateAction<number>> | undefined;
   categoryName?: string;
 };
 
-export const ProductRow = ({ foodData, categoryName }: foodsDataProps) => {
+export const ProductRow = ({
+  foodData,
+  categoryName,
+  quantity,
+  setQuantity,
+}: foodsDataProps) => {
   return (
     <div className="">
       <div className="flex flex-col gap-6">
@@ -22,11 +30,11 @@ export const ProductRow = ({ foodData, categoryName }: foodsDataProps) => {
         <div className="grid grid-cols-4 gap-6">
           {foodData?.map((product) => {
             return (
-              <FoodProductCard
+              <DialogButton
                 key={product?._id}
-                image={product?.image}
-                name={product?.name}
-                price={product?.price}
+                product={product}
+                quantity={quantity}
+                setQuantity={setQuantity}
               />
             );
           })}

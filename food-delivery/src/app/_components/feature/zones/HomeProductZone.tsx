@@ -1,12 +1,19 @@
 import { groupBy } from "lodash";
 import { foodData } from "../../data/DataType";
 import { ProductRow } from "../parts/ProductRow";
+import { Dispatch, SetStateAction } from "react";
 
 type HomeProductZoneProps = {
   foodData?: foodData[];
+  quantity?: number;
+  setQuantity?: Dispatch<SetStateAction<number>> | undefined;
 };
 
-export const HomeProductZone = ({ foodData }: HomeProductZoneProps) => {
+export const HomeProductZone = ({
+  foodData,
+  quantity,
+  setQuantity,
+}: HomeProductZoneProps) => {
   const groupedData = groupBy(foodData, (foods) => foods.categoryId?.name);
 
   return (
@@ -20,6 +27,8 @@ export const HomeProductZone = ({ foodData }: HomeProductZoneProps) => {
                   key={categoryName}
                   foodData={groupedData[categoryName]}
                   categoryName={categoryName}
+                  quantity={quantity}
+                  setQuantity={setQuantity}
                 />
               );
             })}

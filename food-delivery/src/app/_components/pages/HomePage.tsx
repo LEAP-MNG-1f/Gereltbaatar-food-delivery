@@ -9,6 +9,7 @@ import { foodData } from "../data/DataType.js";
 
 const HomePage = () => {
   const [foodDatas, setfoodDatas] = useState<foodData[]>([]);
+  const [quantity, setQuantity] = useState(1);
 
   const BACKEND_END_POINT = process.env.BACKEND_URL;
 
@@ -31,7 +32,11 @@ const HomePage = () => {
       <MainLayout>
         <GreenZone />
         <FoodNewsCard />
-        <HomeProductZone foodData={foodDatas} />
+        <HomeProductZone
+          setQuantity={setQuantity}
+          quantity={quantity}
+          foodData={foodDatas}
+        />
       </MainLayout>
     </main>
   );
