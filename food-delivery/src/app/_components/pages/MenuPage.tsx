@@ -9,6 +9,8 @@ const MenuPage = () => {
   const [foodDatas, setfoodDatas] = useState([]);
   const [categoryValue, setCategoryValue] = useState("Breakfast");
 
+  const BACKEND_END_POINT = process.env.BACKEND_URL;
+
   const fetchData = async () => {
     try {
       const response = await fetch(`${BACKEND_END_POINT}/foods`);
