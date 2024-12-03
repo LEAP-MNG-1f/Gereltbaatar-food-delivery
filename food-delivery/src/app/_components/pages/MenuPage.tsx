@@ -10,6 +10,7 @@ const MenuPage = () => {
   const [categoryValue, setCategoryValue] = useState("Breakfast");
 
   const BACKEND_END_POINT = process.env.BACKEND_URL;
+  const [categoryValue, setCategoryValue] = useState("Breakfast");
 
   const fetchData = async () => {
     try {
