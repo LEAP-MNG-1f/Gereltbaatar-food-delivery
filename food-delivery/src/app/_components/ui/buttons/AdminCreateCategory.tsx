@@ -33,17 +33,14 @@ export const AdminCreateCategory = () => {
       };
 
       try {
-        const response = await fetch(
-          `${BACKEND_END_POINT}/api/categorys`,
-          option
-        );
+        const response = await fetch(`${BACKEND_END_POINT}/categorys`, option);
         const data = await response.json();
 
         if (!response.ok)
           throw new Error(`HTTP error! status: ${response.status}`);
         handleClose();
       } catch (error) {
-        console.error(error);
+        console.log(error);
       }
     },
   });

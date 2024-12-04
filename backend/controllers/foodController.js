@@ -1,21 +1,38 @@
 import { Food } from "../model/food.js";
+import { v2 as cloudinary } from "cloudinary";
 
 const createFood = async (request, response) => {
   try {
-    const result = await Food.ins({
-      name: "Mexican Tacos",
-      price: "9,500",
-      image:
-        "https://s23209.pcdn.co/wp-content/uploads/2019/04/Mexican-Street-TacosIMG_9091.jpg",
-      categoryId: "6746a10d121cbc7de5bb74b4",
-      ingredient: "Хулуу, төмс, лууван , сонгино, цөцгийн тос, самрын үр ",
+    const { name, ingredient, price, categoryId } = request.body;
+    const file = request.file;
+
+    if (!file) {
+      return response
+        .status(400)
+        .json({ success: false, message: "Image is required" });
+    }
+
+    const uploadResult = await cloudinary.uploader.upload(file.path, {
+      folder: "foods",
     });
 
-    response.json({
-      succse: true,
+    const result = await Food.create({
+      name,
+      image: uploadResult.url,
+      ingredient,
+      price,
+      categoryId,
+    });
+
+    response.status(201).json({
+      success: true,
+      message: "Food item created successfully",
       data: result,
     });
   } catch (e) {
+    response
+      .status(500)
+      .json({ success: false, message: "Error creating food" });
     console.log("Create food data failed");
   }
 };

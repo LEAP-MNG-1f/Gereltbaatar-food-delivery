@@ -9,7 +9,7 @@ export type foodData = {
     name?: string;
     __v?: number;
   };
-  price?: string;
+  price?: number;
   __v?: number;
   quantity?: number;
 };
