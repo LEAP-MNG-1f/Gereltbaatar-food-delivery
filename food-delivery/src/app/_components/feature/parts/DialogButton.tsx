@@ -8,6 +8,7 @@ import { MinusIcon } from "../../ui/svg/MinusIcon";
 import { useState } from "react";
 import { foodData } from "../../data/DataType";
 import { Dispatch, SetStateAction } from "react";
+import { refresh } from "../../lib/actions";
 
 type DialogButtonProps = {
   product?: foodData;
@@ -50,42 +51,41 @@ export const DialogButton = ({
 
   // //----------------------------------------------------------------------------->>
 
-  const handleOnSbmit = (
-    product?: foodData, // _id биш, product-г ашиглана
+  const handleOnSbmit = async (
+    product?: foodData,
     quantity?: number | undefined
   ) => {
     if (product?._id !== undefined && quantity !== undefined) {
-      // Өмнө хадгалагдсан бүтээгдэхүүнүүдийг шалгах
       const existingItems = drawerItems.filter(
         (drawerItem: { product: foodData; quantity: number }) =>
-          drawerItem.product._id === product?._id // _id-ийг ашиглах
+          drawerItem.product._id === product?._id
       );
 
       if (existingItems.length > 0) {
-        const itemToUpdateId = existingItems[0].product._id; // Бүтээгдэхүүний _id
-        const newQuantity = existingItems[0].quantity + quantity; // Шинэ тоо хэмжээ
+        const itemToUpdateId = existingItems[0].product._id;
+        const newQuantity = existingItems[0].quantity + quantity;
 
-        // Бүтээгдэхүүний тоо хэмжээг шинэчлэх
         drawerItems = drawerItems.map(
           (drawerItem: { product: foodData; quantity: number }) =>
             drawerItem.product._id === itemToUpdateId
-              ? { ...drawerItem, quantity: newQuantity } // Тоо хэмжээг нэмэх
+              ? { ...drawerItem, quantity: newQuantity }
               : drawerItem
         );
 
         localStorage.setItem("items", JSON.stringify(drawerItems));
       } else {
         const newItem = {
-          product, // Бүтээгдэхүүний мэдээлэл
-          quantity: quantity, // Тоо хэмжээ
+          product,
+          quantity: quantity,
         };
-        drawerItems.push(newItem); // Шинэ бүтээгдэхүүн нэмэх
+        drawerItems.push(newItem);
 
         localStorage.setItem("items", JSON.stringify(drawerItems));
       }
     }
-    setQuantity?.(1); // Тоо хэмжээг анхны утганд тохируулах
-    setOpen(false); // Таглах
+    setQuantity?.(1);
+    setOpen(false);
+    await refresh();
     // localStorage.removeItem("items");
   };
   //----------------------------------------------------------------------------->>
@@ -97,6 +97,7 @@ export const DialogButton = ({
           image={product?.image}
           name={product?.name}
           price={product?.price}
+          product={undefined}
         />
       </button>
       <Dialog

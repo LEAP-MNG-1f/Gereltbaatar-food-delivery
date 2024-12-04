@@ -7,6 +7,8 @@ import Stack from "@mui/material/Stack";
 import Badge from "@mui/material/Badge";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Link from "next/link";
+import { foodData } from "../../data/DataType";
+import { uniqueId } from "lodash";
 
 //----------------------[MUI - change customr color]----------------------//
 
@@ -25,11 +27,37 @@ const theme = createTheme({
   },
 });
 
-//----------------------[MUI - change customr color]----------------------//
+//----------------------[ Types ]----------------------//
 
 type Anchor = "right";
 
-export const CartDrawer = () => {
+type CartDrawerProps = {
+  drawerDatas?: foodData[];
+};
+
+export const CartDrawer = ({ drawerDatas }: CartDrawerProps) => {
+  //----------------------[ Function ]----------------------//
+
+  const convertToNumber = (str: string) => {
+    if (str) {
+      const clearedString = str.replace(",", "");
+      return Number(clearedString);
+    } else {
+      return NaN;
+    }
+  };
+
+  //----------------------[ Types ]----------------------//
+
+  const formatNumberToString = (nbr: number) => {
+    if (nbr) {
+      return nbr.toLocaleString("en-US");
+    }
+    return "";
+  };
+
+  //----------------------[ Types ]----------------------//
+
   const [state, setState] = useState({
     right: false,
   });
@@ -38,6 +66,22 @@ export const CartDrawer = () => {
     (anchor: Anchor, open: boolean) => (event: KeyboardEvent | MouseEvent) => {
       setState({ ...state, [anchor]: open });
     };
+
+  const totalQuantity = (drawerDatas || []).reduce((total, item) => {
+    return total + (item.quantity || 0);
+  }, 0);
+
+  const totalPrice = (drawerDatas || []).reduce((total, item) => {
+    return total + convertToNumber(item.product.price || 0);
+  }, 0);
+
+  // const input = "9,500";
+  // const result = convertToNumber(input);
+  // console.log(result, "result shuu"); // 9500
+
+  const AllTotalPrice = totalPrice * totalQuantity;
+
+  const formatted = formatNumberToString(AllTotalPrice);
 
   return (
     <div>
@@ -56,7 +100,7 @@ export const CartDrawer = () => {
                       color: "white",
                     },
                   }}
-                  badgeContent={1}
+                  badgeContent={totalQuantity}
                 >
                   <CartIcon />
                 </Badge>
@@ -81,10 +125,20 @@ export const CartDrawer = () => {
                     <div></div>
                   </div>
                   <div className="2xl:h-[785px] xl:h-[600px] h-[840px] px-6 overflow-scroll scrollbar-none">
-                    <DrawerCartCard />
-                    <DrawerCartCard />
-                    <DrawerCartCard />
-                    <DrawerCartCard />
+                    {drawerDatas?.map((drawerData) => {
+                      return (
+                        <div key={uniqueId()}>
+                          <DrawerCartCard
+                            name={drawerData?.product?.name}
+                            price={drawerData?.product?.price}
+                            quantity={drawerData?.quantity}
+                            ingredient={drawerData?.product?.ingredient}
+                            image={drawerData?.product?.image}
+                            _id={drawerData?.product?._id}
+                          />
+                        </div>
+                      );
+                    })}
                   </div>
                 </div>
                 <div className="grid grid-cols-2 items-center justify-between py-[10px] px-8 h-[172px] shadow-black shadow-2xl">
@@ -92,7 +146,7 @@ export const CartDrawer = () => {
                     <p className="font-Poppins text-lg text-[#5E6166]">
                       Нийт төлөх дүн
                     </p>
-                    <p className="text-lg font-bold">34,800₮</p>
+                    <p className="text-lg font-bold">{formatted}₮</p>
                   </div>
                   <Link href={"/checkout"} className="w-full">
                     <button className="w-full flex items-center justify-center bg-BrandGreen py-2 px-4 flex-[1_0_0] rounded-[4px]">

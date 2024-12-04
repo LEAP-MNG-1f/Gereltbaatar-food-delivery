@@ -1,4 +1,5 @@
 export type foodData = {
+  product: any;
   _id?: string;
   name?: string;
   image?: string;
@@ -17,9 +18,4 @@ export type categoryDatas = {
   _id?: string | undefined;
   name?: string;
   __v?: number;
-};
-
-export type drawerId = {
-  _id?: string | undefined;
-  quantity?: number;
 };
