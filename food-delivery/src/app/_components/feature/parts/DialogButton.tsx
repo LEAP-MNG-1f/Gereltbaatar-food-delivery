@@ -47,6 +47,20 @@ export const DialogButton = ({
 
   //----------------------------------------------------------------------------->>
 
+  const formatNumberToString = (num: number | undefined) => {
+    if (typeof num !== "number") {
+      throw new Error("Input must be a number");
+    }
+
+    return num.toLocaleString("en-US");
+  };
+
+  const number = product?.price;
+  const formattedString = formatNumberToString(number);
+  console.log(formattedString);
+
+  // //----------------------------------------------------------------------------->>
+
   let drawerItems = JSON.parse(localStorage.getItem("items") || "[]");
 
   // //----------------------------------------------------------------------------->>
@@ -140,7 +154,7 @@ export const DialogButton = ({
                 {product?.name}
               </Typography>
               <Typography className="!font-Poppins !font-semibold !not-italic !text-BrandGreen !text-lg">
-                {product?.price}₮
+                {formattedString}₮
               </Typography>
             </div>
             <div className="flex flex-col gap-3">
