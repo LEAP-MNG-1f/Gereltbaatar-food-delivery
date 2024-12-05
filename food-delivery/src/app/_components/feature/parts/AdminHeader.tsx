@@ -3,12 +3,17 @@
 import Link from "next/link";
 import { PineconeLogo } from "../../ui/svg/PineconeLogo";
 import { ProfileIcon } from "../../ui/svg/ProfileIcon";
-import { CartDrawer } from "./CartDrawer";
 import { HeaderButton } from "../../ui/buttons/HeaderButton";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
+import { DashboardBadgeButton } from "../../ui/buttons/DashboardBadgeButton";
 
 export const AdminHeader = () => {
   const pathname = usePathname();
+  const router = useRouter();
+
+  const handleLink = () => {
+    router.push("/dashboard");
+  };
 
   return (
     <header>
@@ -53,9 +58,20 @@ export const AdminHeader = () => {
               </div>
             </div>
             <div className="flex items-center gap-2">
-              <div>
-                <CartDrawer />
-              </div>
+              <Link href={"/admin/dashboard"}>
+                <div className="flex items-center gap-2 pl-4 py-2">
+                  <DashboardBadgeButton />
+                  <p
+                    className={`py-2 font-bold text-sm leading-4 tracking-[-0.2px] ${
+                      pathname === "/admin/dashboard"
+                        ? "text-BrandGreen "
+                        : "text-black"
+                    }`}
+                  >
+                    ХЯНАЛТЫН САМБАР
+                  </p>
+                </div>
+              </Link>
 
               <div className="flex items-center gap-2 pl-4 py-2">
                 <ProfileIcon />

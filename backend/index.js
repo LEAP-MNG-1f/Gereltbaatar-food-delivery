@@ -36,6 +36,10 @@ cloudinary.config({
   api_secret: process.env.CLOUDINARY_API_SECRET,
 });
 
+//--------------------------------[ mongoose_URL ]--------------------------------//
+
+mongoose.connect(process.env.MONGODB_URL);
+
 //--------------------------------[ listen ]--------------------------------//
 
 server.listen(PORT, () => {

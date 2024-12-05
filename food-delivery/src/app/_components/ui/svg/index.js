@@ -26,3 +26,5 @@ export * from "./AddGrayIcon";
 export * from "./AddGreenIcon";
 export * from "./EditIcon";
 export * from "./TrashIcon";
+export * from "./NotFoundLogo";
+export * from "./DashboardIcon";

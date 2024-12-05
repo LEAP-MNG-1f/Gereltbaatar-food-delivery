@@ -21,8 +21,9 @@ const getAllCategory = async (request, response) => {
       succes: true,
       data: result,
     });
-  } catch (e) {
-    console.log("Fetch category in failed");
+  } catch (error) {
+    console.log("Error fetching products:", error);
+    response.status(500).json({ message: "Failed to fetch products" });
   }
 };
 

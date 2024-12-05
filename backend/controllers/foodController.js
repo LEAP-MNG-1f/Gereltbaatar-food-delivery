@@ -46,7 +46,7 @@ const getAllFoods = async (request, response) => {
       data: result,
     });
   } catch (e) {
-    console.log("Fetch food product in failed");
+    console.log("Fetch food product in failed", e);
   }
 };
 

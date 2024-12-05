@@ -38,14 +38,14 @@ type CartDrawerProps = {
 export const CartDrawer = ({ drawerDatas }: CartDrawerProps) => {
   //----------------------[ Function ]----------------------//
 
-  const convertToNumber = (str: string) => {
-    if (str) {
-      const clearedString = str.replace(",", "");
-      return Number(clearedString);
-    } else {
-      return NaN;
-    }
-  };
+  // const convertToNumber = (str: string) => {
+  //   if (str) {
+  //     const clearedString = str.replace(",", "");
+  //     return Number(clearedString);
+  //   } else {
+  //     return NaN;
+  //   }
+  // };
 
   //----------------------[ Types ]----------------------//
 
@@ -71,17 +71,17 @@ export const CartDrawer = ({ drawerDatas }: CartDrawerProps) => {
     return total + (item.quantity || 0);
   }, 0);
 
-  const totalPrice = (drawerDatas || []).reduce((total, item) => {
-    return total + convertToNumber(item.product.price || 0);
-  }, 0);
+  // const totalPrice = (drawerDatas || []).reduce((total, item) => {
+  // return total + convertToNumber(item.product.price || 0);
+  // }, 0);
 
   // const input = "9,500";
   // const result = convertToNumber(input);
   // console.log(result, "result shuu"); // 9500
 
-  const AllTotalPrice = totalPrice * totalQuantity;
+  // const AllTotalPrice = totalPrice * totalQuantity;
 
-  const formatted = formatNumberToString(AllTotalPrice);
+  // const formatted = formatNumberToString(AllTotalPrice);
 
   return (
     <div>
@@ -146,7 +146,7 @@ export const CartDrawer = ({ drawerDatas }: CartDrawerProps) => {
                     <p className="font-Poppins text-lg text-[#5E6166]">
                       Нийт төлөх дүн
                     </p>
-                    <p className="text-lg font-bold">{formatted}₮</p>
+                    {/* <p className="text-lg font-bold">{formatted}₮</p> */}
                   </div>
                   <Link href={"/checkout"} className="w-full">
                     <button className="w-full flex items-center justify-center bg-BrandGreen py-2 px-4 flex-[1_0_0] rounded-[4px]">

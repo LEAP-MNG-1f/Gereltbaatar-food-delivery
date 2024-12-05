@@ -60,11 +60,12 @@ export const Header = () => {
               <div>
                 <CartDrawer drawerDatas={drawerDatas} />
               </div>
-
-              <div className="flex items-center gap-2 pl-4 py-2">
-                <ProfileIcon />
-                <p className="font-bold text-sm tracking-[-0.3px]">Нэвтрэх</p>
-              </div>
+              <Link href={"/admin"}>
+                <div className="flex items-center gap-2 pl-4 py-2">
+                  <ProfileIcon />
+                  <p className="font-bold text-sm tracking-[-0.3px]">Нэвтрэх</p>
+                </div>
+              </Link>
             </div>
           </div>
         </div>
